@@ -25,6 +25,9 @@ export const metadata: Metadata = {
       "application/rss+xml": `${SITE_URL}/feed.xml`,
     },
   },
+  verification: {
+    google: "WI62FBST5dBGodyLcvWW8g5CgaGG7nlb1G8YZ0O4nOw",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
