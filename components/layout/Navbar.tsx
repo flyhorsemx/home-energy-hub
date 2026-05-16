@@ -5,13 +5,13 @@ import { useState } from "react"
 import { Menu, X, Zap } from "lucide-react"
 
 const navLinks = [
-  { href: "/quotes/solar", label: "Solar" },
-  { href: "/quotes/hvac", label: "HVAC" },
-  { href: "/quotes/roofing", label: "Roofing" },
-  { href: "/quotes/windows", label: "Windows" },
+  { href: "/solar", label: "Solar" },
+  { href: "/hvac", label: "HVAC" },
+  { href: "/roofing", label: "Roofing" },
+  { href: "/windows", label: "Windows" },
   { href: "/calculator", label: "Calculator" },
-  { href: "/blog", label: "DIY Blog" },
-  { href: "/news", label: "News" },
+  { href: "/tools/rebates", label: "Rebates" },
+  { href: "/blog", label: "Guides" },
 ]
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl text-green-700">
           <Zap className="w-6 h-6 text-yellow-500" />
-          HomeEnergyHub
+          CleverHomeEnergy
         </Link>
 
         {/* Desktop nav */}

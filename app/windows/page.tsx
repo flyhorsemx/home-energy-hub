@@ -1,0 +1,119 @@
+import Link from "next/link"
+import { AppWindow, ArrowRight, Star } from "lucide-react"
+import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Energy-Efficient Window Replacement Cost & Free Quotes (2025)",
+  description:
+    "Get free window replacement quotes from local contractors. Compare ENERGY STAR windows, brands, and costs. Cut heating/cooling bills by up to 25%.",
+}
+
+const topics = [
+  { title: "Energy-Efficient Windows Cost in 2025", href: "/news/energy-efficient-windows-cost-2025", tag: "Pricing" },
+  { title: "Best Energy-Efficient Window Brands", href: "/blog/best-energy-efficient-windows", tag: "Comparison" },
+  { title: "Double vs Triple Pane Windows", href: "/blog/double-vs-triple-pane-windows", tag: "Guide" },
+  { title: "Window Replacement: DIY vs Pro", href: "/blog/window-replacement-guide", tag: "Guide" },
+  { title: "ENERGY STAR Window Tax Credits", href: "/blog/energy-star-window-tax-credit", tag: "Savings" },
+  { title: "Get Free Window Estimates", href: "/quotes/windows", tag: "Get Quote" },
+]
+
+const windowTypes = [
+  { type: "Double-Pane", cost: "$150–$400/window", savings: "15–20%", best: "Best value, most common" },
+  { type: "Triple-Pane", cost: "$400–$800/window", savings: "20–25%", best: "Best for cold climates" },
+  { type: "Low-E Coated", cost: "$200–$500/window", savings: "15–20%", best: "Best for hot climates" },
+  { type: "Gas-Filled", cost: "$300–$600/window", savings: "18–22%", best: "Best insulation value" },
+]
+
+export default function WindowsPage() {
+  return (
+    <>
+      <section className="bg-gradient-to-br from-purple-50 to-indigo-50 py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-2 mb-4">
+            <AppWindow className="w-6 h-6 text-purple-500" />
+            <span className="text-sm font-semibold text-purple-700">Windows & Doors</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+            Energy-Efficient Window Replacement:<br />
+            <span className="text-purple-600">Cut Bills Up to 25%</span>
+          </h1>
+          <p className="text-gray-600 text-lg mb-8 max-w-2xl">
+            Drafty windows waste $300–$500/year in energy. Upgrade to ENERGY STAR certified windows and get free quotes from local installers.
+          </p>
+          <ZipCodeForm category="windows" />
+        </div>
+      </section>
+
+      <section className="bg-purple-600 py-8 px-4">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+          {[
+            { v: "$150–$800", l: "Cost Per Window" },
+            { v: "Up to 25%", l: "Energy Savings" },
+            { v: "$300+", l: "Annual Savings Avg." },
+            { v: "30% Tax Credit", l: "ENERGY STAR Windows" },
+          ].map((s) => (
+            <div key={s.l}>
+              <p className="text-2xl font-extrabold">{s.v}</p>
+              <p className="text-purple-100 text-xs mt-1">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Window Types & Costs Compared</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-50">
+                  <th className="text-left p-3 font-semibold text-gray-700 border border-gray-200">Window Type</th>
+                  <th className="text-left p-3 font-semibold text-gray-700 border border-gray-200">Cost Per Window</th>
+                  <th className="text-left p-3 font-semibold text-gray-700 border border-gray-200">Energy Savings</th>
+                  <th className="text-left p-3 font-semibold text-gray-700 border border-gray-200">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                {windowTypes.map((w) => (
+                  <tr key={w.type} className="hover:bg-gray-50">
+                    <td className="p-3 border border-gray-200 font-medium text-gray-900">{w.type}</td>
+                    <td className="p-3 border border-gray-200 text-gray-600">{w.cost}</td>
+                    <td className="p-3 border border-gray-200 text-green-700 font-medium">{w.savings}</td>
+                    <td className="p-3 border border-gray-200 text-gray-500">{w.best}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Window & Door Guides</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {topics.map((t) => (
+              <Link key={t.href} href={t.href} className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md transition-all flex items-center justify-between">
+                <div>
+                  <span className="text-xs font-semibold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full">{t.tag}</span>
+                  <p className="font-semibold text-gray-900 text-sm mt-2 group-hover:text-purple-700 transition-colors">{t.title}</p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all shrink-0 ml-3" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-4 bg-purple-600 text-white text-center">
+        <div className="max-w-xl mx-auto">
+          <Star className="w-10 h-10 text-purple-200 mx-auto mb-3" />
+          <h2 className="text-2xl font-bold mb-2">Get Free Window Replacement Quotes</h2>
+          <p className="text-purple-100 text-sm mb-6">Compare prices from vetted local window installers. Free & no obligation.</p>
+          <ZipCodeForm category="windows" className="[&_input]:bg-white [&_input]:text-gray-900" />
+        </div>
+      </section>
+    </>
+  )
+}
