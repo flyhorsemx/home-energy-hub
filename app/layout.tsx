@@ -4,22 +4,26 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
-import { SITE_URL, SITE_NAME } from "@/lib/config"
+import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/config"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — Upgrade Your Home, Lower Your Bills`,
+    default: `${SITE_NAME} — Cut Your Energy Bills, Get Free Quotes`,
     template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Get free quotes from local contractors for solar panels, HVAC, roofing, and energy-efficient windows. 100% free service trusted by American homeowners.",
-  keywords: ["solar panels", "HVAC", "roofing", "energy efficient windows", "home energy savings"],
+  description: SITE_DESC,
+  keywords: ["solar panels", "HVAC", "roofing", "energy efficient windows", "home energy savings", "free quotes", "energy rebates"],
   metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: SITE_NAME,
     type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@CleverHomeEnergy",
   },
   alternates: {
     types: {
@@ -28,6 +32,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "WI62FBST5dBGodyLcvWW8g5CgaGG7nlb1G8YZ0O4nOw",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
   },
 }
 

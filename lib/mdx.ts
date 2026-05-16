@@ -8,6 +8,8 @@ export interface PostMeta {
   excerpt: string
   category?: string
   author?: string
+  readTime?: string
+  keywords?: string[]
   slug: string
 }
 

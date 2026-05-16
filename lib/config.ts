@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://homeenergyhub.com"
-export const SITE_NAME = "HomeEnergyHub"
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cleverhomeenergy.com"
+export const SITE_NAME = "CleverHomeEnergy"
 export const SITE_DESC =
-  "Free solar, HVAC, roofing, and window quotes for US homeowners. Expert DIY guides and industry news."
+  "Get free solar, HVAC, roofing, and window quotes from vetted local contractors. Cut your energy bills — trusted by 47,000+ American homeowners."

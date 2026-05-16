@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { Sun, Wind, Home, AppWindow, Shield, Star, CheckCircle, ArrowRight, Calculator, TrendingDown, Award, Users } from "lucide-react"
 import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
+import SavingsEstimator from "@/components/home/SavingsEstimator"
 import type { Metadata } from "next"
-import { SITE_URL } from "@/lib/config"
+import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/config"
 
 export const metadata: Metadata = {
   title: "Cut Your Energy Bills — Free Quotes from Local Pros | CleverHomeEnergy",
@@ -180,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SAVINGS CALCULATOR TEASER ─── */}
+      {/* ─── SAVINGS CALCULATOR ─── */}
       <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
@@ -191,49 +192,9 @@ export default function HomePage() {
             How Much Could You Save This Year?
           </h2>
           <p className="text-gray-500 mb-8">
-            Enter your monthly electric bill and ZIP code. Our calculator instantly estimates your solar savings and payback period.
+            Instantly estimate your solar savings and payback period based on your state and usage.
           </p>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="text-left">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Electric Bill</label>
-                <select className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
-                  <option>Under $100</option>
-                  <option selected>$100 – $200</option>
-                  <option>$200 – $300</option>
-                  <option>Over $300</option>
-                </select>
-              </div>
-              <div className="text-left">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Home Type</label>
-                <select className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
-                  <option>Single Family</option>
-                  <option>Townhouse</option>
-                  <option>Condo</option>
-                </select>
-              </div>
-              <div className="text-left">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your State</label>
-                <select className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
-                  <option>California</option>
-                  <option>Texas</option>
-                  <option>Florida</option>
-                  <option>Arizona</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-            <Link
-              href="/calculator"
-              className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors"
-            >
-              <Calculator className="w-4 h-4" />
-              Calculate My Savings
-            </Link>
-            <p className="text-xs text-gray-400 mt-3">
-              Avg. homeowner saves <strong>$1,200–$1,800/year</strong> after solar installation
-            </p>
-          </div>
+          <SavingsEstimator />
         </div>
       </section>
 
