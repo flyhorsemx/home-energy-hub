@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import type { Metadata } from "next"
 import MultiStepQuoteForm from "@/components/lead-gen/MultiStepQuoteForm"
-import { Sun, Wind, Home, AppWindow, CheckCircle, Shield, Star, Lock, Users } from "lucide-react"
+import { Sun, Wind, Home, AppWindow, Layers, Droplets, CheckCircle, Shield, Star, Lock, Users } from "lucide-react"
 
 const categoryConfig: Record<string, {
   title: string
@@ -102,6 +102,50 @@ const categoryConfig: Record<string, {
       location: "Chicago, IL",
       savings: "$340/yr saved",
       quote: "My house is so much warmer this winter. No more drafts and my heating bill dropped noticeably.",
+    },
+  },
+  insulation: {
+    title: "Get Free Insulation Quotes",
+    headline: "Cut Heating & Cooling Bills With Better Insulation",
+    subheadline: "Proper insulation reduces energy costs 15–25%. Get free quotes from local insulation contractors.",
+    icon: Layers,
+    accentColor: "text-amber-600",
+    bgColor: "bg-amber-600",
+    benefits: [
+      "30% IRA tax credit — up to $1,200/year",
+      "Payback as fast as 3 years for attic projects",
+      "Reduce drafts and improve year-round comfort",
+      "Compare up to 3 bids to get the best price",
+    ],
+    savings: "$300+/yr",
+    avgSavings: "Save $300+/year",
+    caseStudy: {
+      name: "David M.",
+      location: "Denver, CO",
+      savings: "$380/yr saved",
+      quote: "Added R-49 insulation to my attic and my heating bill dropped immediately. The tax credit covered 30% of the cost.",
+    },
+  },
+  "water-heating": {
+    title: "Get Free Water Heater Quotes",
+    headline: "Switch to a Heat Pump Water Heater & Save 70%",
+    subheadline: "Get free quotes from licensed contractors. Qualify for the $2,000 IRA federal tax credit.",
+    icon: Droplets,
+    accentColor: "text-cyan-600",
+    bgColor: "bg-cyan-600",
+    benefits: [
+      "$2,000 IRA federal tax credit for qualifying units",
+      "Cut water heating costs by up to 70%",
+      "Payback as fast as 2–3 years",
+      "Compare up to 3 bids from licensed contractors",
+    ],
+    savings: "$400+/yr",
+    avgSavings: "Save $400+/year",
+    caseStudy: {
+      name: "Linda K.",
+      location: "Portland, OR",
+      savings: "$420/yr saved",
+      quote: "My water heating bill dropped by over $400 the first year. The $2,000 tax credit made the upgrade a no-brainer.",
     },
   },
 }

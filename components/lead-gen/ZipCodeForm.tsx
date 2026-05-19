@@ -6,6 +6,7 @@ import { z } from "zod"
 import { useRouter } from "next/navigation"
 import { MapPin, ArrowRight, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { trackPixelEvent } from "@/components/analytics/MetaPixel"
 
 const schema = z.object({
   zip: z
@@ -36,6 +37,7 @@ export default function ZipCodeForm({ compact = false, category, className }: Zi
 
   const onSubmit = (data: FormData) => {
     const target = data.category || category || "solar"
+    trackPixelEvent("Lead", { content_category: target, content_name: "zip_submit" })
     router.push(`/quotes/${target}?zip=${data.zip}`)
   }
 

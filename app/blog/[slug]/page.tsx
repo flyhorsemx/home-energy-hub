@@ -4,6 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc"
 import type { Metadata } from "next"
 import Sidebar from "@/components/layout/Sidebar"
 import ProWarningAlert from "@/components/content/ProWarningAlert"
+import AffiliateProduct from "@/components/content/AffiliateProduct"
 import InContentCTA from "@/components/lead-gen/InContentCTA"
 import NewsletterSignup from "@/components/lead-gen/NewsletterSignup"
 import AuthorBio from "@/components/content/AuthorBio"
@@ -54,6 +55,7 @@ export default async function BlogPost({ params }: Props) {
 
   const components = {
     ProWarningAlert,
+    AffiliateProduct,
     InContentCTA: (props: React.ComponentProps<typeof InContentCTA>) => (
       <InContentCTA category={category} {...props} />
     ),

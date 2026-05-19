@@ -4,12 +4,13 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { CheckCircle, ChevronRight, Loader2, Sun, Wind, Home, AppWindow, Shield, Lock } from "lucide-react"
+import { CheckCircle, ChevronRight, Loader2, Sun, Wind, Home, AppWindow, Layers, Droplets, Shield, Lock } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { trackPixelEvent } from "@/components/analytics/MetaPixel"
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email"),
-  serviceType: z.enum(["solar", "hvac", "roofing", "windows"]),
+  serviceType: z.enum(["solar", "hvac", "roofing", "windows", "insulation", "water-heating"]),
   homeOwnership: z.enum(["own", "rent"]),
   homeSize: z.enum(["under1500", "1500to2500", "over2500"]),
   yearBuilt: z.enum(["before1980", "1980to2000", "after2000"]),
@@ -33,6 +34,8 @@ const SERVICE_OPTIONS = [
   { value: "hvac", label: "HVAC System", sublabel: "Save $400+/yr", icon: Wind, color: "border-blue-300 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-500" },
   { value: "roofing", label: "Roofing", sublabel: "Free estimates", icon: Home, color: "border-red-300 has-[:checked]:bg-red-50 has-[:checked]:border-red-500" },
   { value: "windows", label: "Windows", sublabel: "Up to 25% savings", icon: AppWindow, color: "border-purple-300 has-[:checked]:bg-purple-50 has-[:checked]:border-purple-500" },
+  { value: "insulation", label: "Insulation", sublabel: "Save 15–25%", icon: Layers, color: "border-amber-300 has-[:checked]:bg-amber-50 has-[:checked]:border-amber-500" },
+  { value: "water-heating", label: "Water Heater", sublabel: "$2,000 tax credit", icon: Droplets, color: "border-cyan-300 has-[:checked]:bg-cyan-50 has-[:checked]:border-cyan-500" },
 ]
 
 interface MultiStepQuoteFormProps {
@@ -43,6 +46,7 @@ interface MultiStepQuoteFormProps {
 export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiStepQuoteFormProps) {
   const [step, setStep] = useState(1)
   const [submitted, setSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [leadsCount] = useState(1247)
 
   const {
@@ -72,11 +76,34 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
   }
 
   const onSubmit = async (data: FormData) => {
-    // TODO: Replace with real lead gen API (Modernize/eLocal/QuinStreet)
-    await new Promise((r) => setTimeout(r, 1200))
-    console.log("Lead:", data)
-    setSubmitted(true)
-    setStep(5)
+    setSubmitError(null)
+    try {
+      // Capture TrustedForm cert URL if present (injected by TrustedForm script)
+      const certInput = document.getElementById("xxTrustedFormCertUrl") as HTMLInputElement | null
+      const trustedFormCertUrl = certInput?.value || undefined
+
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          trustedFormCertUrl,
+          userAgent: navigator.userAgent,
+        }),
+      })
+
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}))
+        throw new Error(json?.error ?? `Server error ${res.status}`)
+      }
+
+      trackPixelEvent("CompleteRegistration", { content_name: data.serviceType, status: "lead_submitted" })
+      setSubmitted(true)
+      setStep(5)
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Submission failed"
+      setSubmitError(msg)
+    }
   }
 
   if (submitted) {
@@ -257,6 +284,13 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
               <a href="/privacy" className="underline hover:text-gray-700">Privacy Policy</a>.
               TCPA compliant. Completely free, no obligation.
             </div>
+          </div>
+        )}
+
+        {/* Submission error */}
+        {submitError && (
+          <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+            Something went wrong — please try again or call us directly.
           </div>
         )}
 

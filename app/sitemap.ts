@@ -2,6 +2,7 @@ import { getAllPosts } from "@/lib/mdx"
 import type { MetadataRoute } from "next"
 import { SITE_URL } from "@/lib/config"
 import { STATE_SLUGS } from "@/lib/states"
+import { CITY_SLUGS } from "@/lib/cities"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllPosts("blog")
@@ -18,17 +19,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/roofing`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
     { url: `${SITE_URL}/hvac`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
     { url: `${SITE_URL}/windows`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
+    { url: `${SITE_URL}/insulation`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
+    { url: `${SITE_URL}/water-heating`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
 
     // Quote pages (high-intent, high priority)
     { url: `${SITE_URL}/quotes/solar`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/quotes/hvac`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/quotes/roofing`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/quotes/windows`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE_URL}/quotes/insulation`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE_URL}/quotes/water-heating`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
 
     // Tools
     { url: `${SITE_URL}/calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE_URL}/tools/solar-roi`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/tools/rebates`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/tools/upgrade-planner`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${SITE_URL}/tools/energy-comparison`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/tools/hvac-size`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/tools/roofing-materials`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
 
     // Blog categories
     { url: `${SITE_URL}/blog/category/solar-diy`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
@@ -69,5 +78,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  return [...staticRoutes, ...blogRoutes, ...newsRoutes, ...solarStateRoutes]
+  // Roofing city pages
+  const roofingCityRoutes: MetadataRoute.Sitemap = CITY_SLUGS.map((city) => ({
+    url: `${SITE_URL}/roofing/${city}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  // HVAC city pages
+  const hvacCityRoutes: MetadataRoute.Sitemap = CITY_SLUGS.map((city) => ({
+    url: `${SITE_URL}/hvac/${city}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  // Windows city pages
+  const windowsCityRoutes: MetadataRoute.Sitemap = CITY_SLUGS.map((city) => ({
+    url: `${SITE_URL}/windows/${city}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.82,
+  }))
+
+  // Insulation city pages
+  const insulationCityRoutes: MetadataRoute.Sitemap = CITY_SLUGS.map((city) => ({
+    url: `${SITE_URL}/insulation/${city}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.82,
+  }))
+
+  return [...staticRoutes, ...blogRoutes, ...newsRoutes, ...solarStateRoutes, ...roofingCityRoutes, ...hvacCityRoutes, ...windowsCityRoutes, ...insulationCityRoutes]
 }

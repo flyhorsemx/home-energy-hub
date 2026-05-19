@@ -26,6 +26,8 @@ export default function Footer() {
             <li><Link href="/hvac" className="hover:text-white transition-colors">HVAC Systems</Link></li>
             <li><Link href="/roofing" className="hover:text-white transition-colors">Roofing</Link></li>
             <li><Link href="/windows" className="hover:text-white transition-colors">Windows &amp; Doors</Link></li>
+            <li><Link href="/insulation" className="hover:text-white transition-colors">Insulation</Link></li>
+            <li><Link href="/water-heating" className="hover:text-white transition-colors">Water Heating</Link></li>
           </ul>
         </div>
 
@@ -34,9 +36,11 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/calculator" className="hover:text-white transition-colors">Savings Calculator</Link></li>
             <li><Link href="/tools/solar-roi" className="hover:text-white transition-colors">Solar ROI Calculator</Link></li>
+            <li><Link href="/tools/energy-comparison" className="hover:text-white transition-colors">Energy Cost Comparison</Link></li>
+            <li><Link href="/tools/hvac-size" className="hover:text-white transition-colors">HVAC Size Calculator</Link></li>
+            <li><Link href="/tools/roofing-materials" className="hover:text-white transition-colors">Roofing Material Comparison</Link></li>
             <li><Link href="/tools/rebates" className="hover:text-white transition-colors">Rebate Finder</Link></li>
             <li><Link href="/blog" className="hover:text-white transition-colors">Homeowner Guides</Link></li>
-            <li><Link href="/news" className="hover:text-white transition-colors">Industry News</Link></li>
           </ul>
         </div>
 
@@ -47,6 +51,8 @@ export default function Footer() {
             <li><Link href="/quotes/hvac" className="hover:text-white transition-colors">HVAC Quotes</Link></li>
             <li><Link href="/quotes/roofing" className="hover:text-white transition-colors">Roofing Quotes</Link></li>
             <li><Link href="/quotes/windows" className="hover:text-white transition-colors">Window Quotes</Link></li>
+            <li><Link href="/quotes/insulation" className="hover:text-white transition-colors">Insulation Quotes</Link></li>
+            <li><Link href="/quotes/water-heating" className="hover:text-white transition-colors">Water Heater Quotes</Link></li>
           </ul>
           <div className="mt-4 pt-4 border-t border-gray-800 space-y-1.5 text-xs">
             <Link href="/privacy" className="block hover:text-white transition-colors">Privacy Policy</Link>

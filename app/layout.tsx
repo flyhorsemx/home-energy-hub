@@ -4,6 +4,8 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
+import MetaPixel from "@/components/analytics/MetaPixel"
+import TrustedForm from "@/components/analytics/TrustedForm"
 import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/config"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -45,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <GoogleAnalytics />
+        <MetaPixel />
+        <TrustedForm />
         <Navbar />
         <main>{children}</main>
         <Footer />

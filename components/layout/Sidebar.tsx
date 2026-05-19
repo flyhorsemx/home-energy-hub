@@ -2,7 +2,7 @@ import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import NewsletterSignup from "@/components/lead-gen/NewsletterSignup"
 import AdSlot from "@/components/content/AdSlot"
 import Link from "next/link"
-import { ArrowRight, Calculator, DollarSign } from "lucide-react"
+import { ArrowRight, Calculator, DollarSign, ClipboardList } from "lucide-react"
 
 interface NewsItem {
   title: string
@@ -39,6 +39,23 @@ export default function Sidebar({ topNews = [], category = "solar" }: SidebarPro
             Savings Calculator
           </p>
           <p className="text-xs text-gray-500">How much could you save?</p>
+        </div>
+        <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />
+      </Link>
+
+      {/* Upgrade Planner link */}
+      <Link
+        href="/tools/upgrade-planner"
+        className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl p-4 hover:shadow-md transition-all group"
+      >
+        <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
+          <ClipboardList className="w-5 h-5 text-green-600" />
+        </div>
+        <div>
+          <p className="text-sm font-bold text-gray-900 group-hover:text-green-700 transition-colors">
+            Upgrade Planner
+          </p>
+          <p className="text-xs text-gray-500">What should I upgrade first?</p>
         </div>
         <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />
       </Link>

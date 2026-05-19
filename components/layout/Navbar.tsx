@@ -9,6 +9,8 @@ const navLinks = [
   { href: "/hvac", label: "HVAC" },
   { href: "/roofing", label: "Roofing" },
   { href: "/windows", label: "Windows" },
+  { href: "/insulation", label: "Insulation" },
+  { href: "/water-heating", label: "Water Heating" },
   { href: "/calculator", label: "Calculator" },
   { href: "/tools/rebates", label: "Rebates" },
   { href: "/blog", label: "Guides" },
