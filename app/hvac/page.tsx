@@ -20,6 +20,8 @@ const topics = [
   { title: "Best HVAC Brands Ranked", href: "/blog/best-hvac-brands", tag: "Comparison" },
   { title: "Signs You Need a New HVAC", href: "/blog/signs-you-need-new-hvac", tag: "Diagnosis" },
   { title: "Trane vs Carrier: Which Is Better?", href: "/blog/trane-vs-carrier-hvac", tag: "Comparison" },
+  { title: "Mini-Split Installation Cost 2026", href: "/blog/mini-split-installation-cost", tag: "Pricing" },
+  { title: "Best Heat Pump Brands Ranked", href: "/blog/best-heat-pump-brands", tag: "Comparison" },
 ]
 
 const cities = [

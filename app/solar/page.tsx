@@ -19,6 +19,7 @@ const solarTopics = [
   { title: "Solar Financing Options", href: "/blog/solar-financing-options", tag: "Guide" },
   { title: "Best Solar Panel Brands Ranked", href: "/blog/best-solar-panel-brands", tag: "Comparison" },
   { title: "SunPower vs Panasonic Solar", href: "/blog/sunpower-vs-panasonic-solar", tag: "Comparison" },
+  { title: "How Long Do Solar Panels Last?", href: "/blog/how-long-do-solar-panels-last", tag: "Guide" },
 ]
 
 const topStates = [
