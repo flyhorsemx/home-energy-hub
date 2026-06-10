@@ -139,7 +139,7 @@ async function submitToElocal(lead: LeadPayload, req: NextRequest): Promise<void
     source_url:            "https://cleverhomeenergy.com",
     tcpa_consent:          true,
     tcpa_timestamp:        new Date().toISOString(),
-    tcpa_text:             "By submitting this form you agree to be contacted by up to 3 licensed contractors at the number provided, including autodialed or pre-recorded calls.",
+    tcpa_text:             "By submitting this form you authorize CleverHomeEnergy and its partners to contact you about your request at the number provided, including calls, texts, prerecorded messages, or automated technology. Consent is not a condition of purchase.",
     ip_address:            lead.ipAddress ?? req.headers.get("x-forwarded-for") ?? "unknown",
     user_agent:            lead.userAgent ?? req.headers.get("user-agent") ?? "unknown",
     ...(lead.trustedFormCertUrl && { trusted_form_cert_url: lead.trustedFormCertUrl }),

@@ -1,14 +1,14 @@
 import Link from "next/link"
-import { Sun, Wind, Home, AppWindow, Shield, Star, CheckCircle, ArrowRight, Calculator, TrendingDown, Award, Users } from "lucide-react"
+import { Sun, Wind, Home, AppWindow, Shield, Star, CheckCircle, ArrowRight, Calculator, ClipboardCheck, Lock, Award, Users } from "lucide-react"
 import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import SavingsEstimator from "@/components/home/SavingsEstimator"
 import type { Metadata } from "next"
 import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/config"
 
 export const metadata: Metadata = {
-  title: "Cut Your Energy Bills — Free Quotes from Local Pros | CleverHomeEnergy",
+  title: "Compare Free Home Improvement Quotes | CleverHomeEnergy",
   description:
-    "Get free solar, HVAC, roofing, and window quotes from vetted local contractors. Already helped 47,000+ homeowners cut energy bills. 100% free, no obligation.",
+    "Request free solar, HVAC, roofing, and window quotes from local home improvement companies. Compare project options before you decide.",
   alternates: { canonical: SITE_URL },
 }
 
@@ -16,13 +16,13 @@ const services = [
   {
     icon: Sun,
     title: "Solar",
-    tag: "Save $1,400/yr",
+    tag: "Compare options",
     tagColor: "bg-yellow-100 text-yellow-800",
     borderColor: "border-yellow-300",
     iconBg: "bg-yellow-50",
     iconColor: "text-yellow-500",
     href: "/quotes/solar",
-    desc: "Federal 30% tax credit still available",
+    desc: "Compare costs, local incentives, and utility rules",
   },
   {
     icon: Home,
@@ -38,7 +38,7 @@ const services = [
   {
     icon: AppWindow,
     title: "Windows",
-    tag: "Up to 25% savings",
+    tag: "Compare styles",
     tagColor: "bg-purple-100 text-purple-800",
     borderColor: "border-purple-300",
     iconBg: "bg-purple-50",
@@ -60,20 +60,20 @@ const services = [
 ]
 
 const trustLogos = [
-  { name: "BBB", rating: "A+ Rated" },
-  { name: "HomeAdvisor", rating: "Elite Service" },
-  { name: "Modernize", rating: "Verified Partner" },
-  { name: "Google", rating: "4.9 ★ (2,400 reviews)" },
+  { name: "Quote Request", rating: "Free to use" },
+  { name: "Privacy", rating: "Secure form" },
+  { name: "TCPA", rating: "Consent language included" },
+  { name: "Homeowner Guides", rating: "Project research tools" },
 ]
 
 const reviews = [
   {
     name: "Lisa M.",
     location: "Phoenix, AZ",
-    quote: "Got 3 solar quotes in 24 hours. Saved $28,000 vs what I was first quoted!",
+    quote: "Got local solar quotes quickly and could compare equipment, warranty, and installation details.",
     stars: 5,
     service: "Solar",
-    savings: "$1,600/yr",
+    savings: "Solar quotes",
   },
   {
     name: "David R.",
@@ -81,7 +81,7 @@ const reviews = [
     quote: "New HVAC through CleverHomeEnergy — easy process, no pressure. Electric bill down 40%.",
     stars: 5,
     service: "HVAC",
-    savings: "$520/yr",
+    savings: "HVAC quotes",
   },
   {
     name: "Sarah K.",
@@ -114,7 +114,7 @@ const latestGuides = [
     slug: "hvac-maintenance-checklist",
     category: "HVAC",
     categoryColor: "bg-blue-50 text-blue-700",
-    title: "Annual HVAC Maintenance Checklist: Save $300+ This Year",
+    title: "Annual HVAC Maintenance Checklist",
     excerpt: "Simple steps homeowners can do themselves, plus what to leave to the pros.",
     readTime: "5 min read",
   },
@@ -122,8 +122,8 @@ const latestGuides = [
 
 const stats = [
   { value: "47,000+", label: "Homeowners Helped", icon: Users },
-  { value: "$1,200", label: "Avg. Annual Savings", icon: TrendingDown },
-  { value: "500+", label: "Vetted Contractors", icon: Award },
+  { value: "6", label: "Project Categories", icon: ClipboardCheck },
+  { value: "500+", label: "Local Companies", icon: Award },
   { value: "100%", label: "Free Service", icon: Shield },
 ]
 
@@ -134,20 +134,19 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-            🔥 Federal Rebates Available — Limited 2025 Window
+            Free quote request
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-            Cut Your Energy Bills —<br />
-            <span className="text-yellow-300">Get Free Quotes from Local Pros</span>
+            Compare Free Quotes for Solar, HVAC, Roofing, Windows &amp; Insulation
           </h1>
           <p className="text-green-100 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-            Enter your ZIP code. Get matched with vetted local contractors in 60 seconds. No spam, no obligation.
+            Enter your ZIP code to request local quote options. Free to use, no obligation to hire, and built for homeowners comparing project scope before they decide.
           </p>
           <div className="flex justify-center mb-6">
             <ZipCodeForm />
           </div>
           <p className="text-green-200 text-sm">
-            ✓ Already helped <strong className="text-white">47,000+</strong> homeowners save on energy costs
+            ✓ Already helped <strong className="text-white">47,000+</strong> homeowners compare project options
           </p>
         </div>
       </section>
@@ -217,7 +216,7 @@ export default function HomePage() {
       <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">
-            Trusted Partners &amp; Certifications
+            Privacy &amp; Homeowner Resources
           </p>
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
             {trustLogos.map((l) => (
@@ -230,7 +229,7 @@ export default function HomePage() {
             ))}
             <div className="flex flex-col items-center gap-1">
               <div className="h-10 px-4 bg-white border border-gray-200 rounded-lg flex items-center justify-center shadow-xs">
-                <Shield className="w-4 h-4 text-green-600 mr-1.5" />
+                <Lock className="w-4 h-4 text-green-600 mr-1.5" />
                 <span className="font-bold text-gray-700 text-sm">TCPA Compliant</span>
               </div>
               <span className="text-xs text-gray-400">Privacy Protected</span>
@@ -316,7 +315,7 @@ export default function HomePage() {
               {
                 step: "1",
                 title: "Enter Your ZIP Code",
-                desc: "We instantly match you with licensed, vetted contractors in your area.",
+                desc: "We help you request quotes from local home improvement companies.",
               },
               {
                 step: "2",
@@ -326,7 +325,7 @@ export default function HomePage() {
               {
                 step: "3",
                 title: "Get Free Competing Quotes",
-                desc: "Receive up to 3 quotes from local pros. Compare, choose, save.",
+                desc: "Review available quote options and choose the company that fits your project.",
               },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3">
@@ -345,10 +344,10 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-green-700 text-white">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            Ready to Save? Get Your Free Home Energy Assessment
+            Ready to Compare Local Project Quotes?
           </h2>
           <p className="text-green-100 mb-8 text-sm">
-            100% free · No obligation · Trusted by 47,000+ homeowners across all 50 states
+            100% free · No obligation · Used by homeowners across all 50 states
           </p>
           <div className="flex justify-center mb-4">
             <ZipCodeForm className="[&_input]:bg-white [&_input]:text-gray-900" />

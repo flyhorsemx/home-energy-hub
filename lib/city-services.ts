@@ -91,7 +91,7 @@ export function getWindowsData(city: CityData): WindowsCityData {
 
   const base = {
     incentives: [
-      "Federal 30% IRA tax credit, up to $600 for ENERGY STAR windows",
+      "Current utility, state, and tax eligibility should be verified before purchase",
       "Up to $250/door for qualifying exterior doors",
       ...stateRebates,
     ],
@@ -130,7 +130,7 @@ export function getWindowsData(city: CityData): WindowsCityData {
       avgSavings: "$280–$450/year",
       recommendedType: "Double or Triple-Pane Low-E",
       uFactor: "U-0.27 or lower, SHGC 0.25–0.40",
-      climateNote: `${city.name}'s mixed heating and cooling climate makes window efficiency important year-round. ENERGY STAR Most Efficient windows (U-factor ≤ 0.20) can qualify for the $600 IRA tax credit. Double-pane with low-E is the minimum; triple-pane is worth considering for north-facing exposures.`,
+      climateNote: `${city.name}'s mixed heating and cooling climate makes window efficiency important year-round. ENERGY STAR and NFRC documentation may matter for rebates or utility programs. Double-pane with low-E is the minimum; triple-pane is worth considering for north-facing exposures.`,
       commonIssues: ["Drafts and air leakage at frames", "Moisture infiltration around casings", "Single-pane heat loss adding to heating bills"],
       payback: "5–8 years",
     }
@@ -143,7 +143,7 @@ export function getWindowsData(city: CityData): WindowsCityData {
     avgSavings: "$350–$600/year",
     recommendedType: "Triple-Pane Low-E",
     uFactor: "U-0.20 or lower, SHGC 0.35–0.55",
-    climateNote: `${city.name}'s cold winters make high-performance windows a high-ROI upgrade. Triple-pane windows with U-factor ≤ 0.20 qualify for the IRA's highest credit tier. Higher SHGC (0.35–0.55) on south-facing windows captures passive solar heat in winter, meaningfully reducing heating costs.`,
+    climateNote: `${city.name}'s cold winters make high-performance windows a high-ROI upgrade. Triple-pane windows with low U-factors can improve comfort; ask contractors for NFRC documentation and current rebate eligibility. Higher SHGC on south-facing windows can capture passive solar heat in winter.`,
     commonIssues: ["Ice buildup and condensation on single-pane glass", "Air leakage through aging frames", "Cold glass causing comfort complaints near windows"],
     payback: "4–7 years",
   }
@@ -181,11 +181,30 @@ export function getInsulationData(city: CityData): InsulationCityData {
 
   const base = {
     incentives: [
-      "Federal IRA 30% tax credit for insulation (up to $1,200/year)",
-      "30% credit for air sealing materials (within same $1,200 cap)",
-      "Home energy audit 30% credit up to $150",
+      "Current utility, state, and tax eligibility should be verified before purchase",
+      "Current air sealing incentive eligibility should be verified before purchase",
+      "Current home energy audit incentives should be verified before purchase",
       ...stateRebates,
     ],
+  }
+
+  if (city.slug === "minneapolis-mn") {
+    return {
+      ...base,
+      recommendedRValue: "R-49 to R-60 (attic), R-19 to R-21 (walls)",
+      avgAtticCost: "$1,400-$3,500",
+      avgAnnualSavings: "$300-$650",
+      climateNote: "Minneapolis heating seasons are long, and attic air leaks can drive heat loss, comfort problems, and ice dams. The best insulation projects air-seal attic bypasses first, then add blown-in cellulose or fiberglass to reach R-49 to R-60. Rim joist sealing and attic hatch treatment are high-return add-ons for older Twin Cities homes.",
+      incentives: [
+        "Current insulation rebate and tax eligibility should be verified before signing",
+        "Xcel Energy insulation and weatherization programs",
+        "CenterPoint Energy insulation and air sealing programs",
+        "Minnesota Commerce Department weatherization assistance",
+      ],
+      commonIssues: ["Ice dams from attic air leaks", "Heat loss through under-insulated attics", "Cold rim joists and attic hatches"],
+      payback: "2-6 years",
+      topProject: "Attic air sealing + blown-in insulation to R-60",
+    }
   }
 
   if (climate === "hot") {

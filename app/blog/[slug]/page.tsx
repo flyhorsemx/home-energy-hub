@@ -51,6 +51,8 @@ export default async function BlogPost({ params }: Props) {
     ? "roofing"
     : post.meta.category?.toLowerCase().includes("window")
     ? "windows"
+    : post.meta.category?.toLowerCase().includes("insulation")
+    ? "insulation"
     : "solar"
 
   const components = {
@@ -58,6 +60,17 @@ export default async function BlogPost({ params }: Props) {
     AffiliateProduct,
     InContentCTA: (props: React.ComponentProps<typeof InContentCTA>) => (
       <InContentCTA category={category} {...props} />
+    ),
+    table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
+      <div className="not-prose my-6 overflow-x-auto rounded-xl border border-gray-200">
+        <table className="w-full min-w-[640px] text-sm" {...props} />
+      </div>
+    ),
+    th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
+      <th className="bg-gray-50 px-4 py-3 text-left font-semibold text-gray-800" {...props} />
+    ),
+    td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
+      <td className="border-t border-gray-100 px-4 py-3 align-top text-gray-700" {...props} />
     ),
   }
 
@@ -95,7 +108,7 @@ export default async function BlogPost({ params }: Props) {
           <InContentCTA
             category={category}
             headline="Ready to Stop Guessing? Get Expert Quotes Free"
-            subtext="Connect with up to 3 licensed local contractors. Compare prices. No commitment required."
+            subtext="Request local quote options and compare project scope before you decide."
           />
 
           {post.meta.author && (

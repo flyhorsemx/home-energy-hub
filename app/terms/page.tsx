@@ -14,7 +14,7 @@ export default function TermsPage() {
       <div className="prose prose-gray max-w-none">
         <h2>1. Service Description</h2>
         <p>
-          HomeEnergyHub is a free lead-generation and information service that connects homeowners with licensed contractors for solar, HVAC, roofing, and window installation services. We do not perform installation services ourselves.
+          HomeEnergyHub is a free lead-generation and information service that helps homeowners request quotes from home improvement companies for solar, HVAC, roofing, and window installation services. We do not perform installation services ourselves.
         </p>
 
         <h2>2. No Warranty on Contractor Services</h2>

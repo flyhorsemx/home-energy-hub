@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return {}
 
   return {
-    title: `Solar Panel Installation Cost in ${data.name} (2025): Prices, Rebates & Quotes`,
-    description: `Average solar installation cost in ${data.name}: ${data.avgCost} before incentives. Get free quotes from local installers. Avg. savings: ${data.avgSavings}.`,
+    title: `Solar Panel Installation Cost in ${data.name}: 2026 Prices, Rebates & Quotes`,
+    description: `Average solar installation cost in ${data.name}: ${data.avgCost} before incentives. Compare local quotes, current rebate rules, and expected production.`,
     keywords: [`solar panels ${data.name}`, `solar installation ${data.name}`, `solar cost ${data.name}`, `solar quotes ${data.name}`],
     alternates: { canonical: `${SITE_URL}/solar/${state}` },
   }
@@ -49,7 +49,7 @@ export default async function StateSolarPage({ params }: Props) {
           </h1>
           <p className="text-gray-600 text-lg mb-6 max-w-2xl">
             Average solar system cost in {data.name}: <strong>{data.avgCost}</strong> before incentives.
-            Most homeowners save <strong>{data.avgSavings}</strong> annually after installation.
+            Compare expected production, incentives, and installation details for your home.
           </p>
           <ZipCodeForm category="solar" />
         </div>
@@ -87,7 +87,7 @@ export default async function StateSolarPage({ params }: Props) {
             ))}
           </div>
           <p className="text-gray-500 text-sm mt-4">
-            * Incentives change frequently. A local {data.name} solar installer can confirm current programs and help you maximize savings.
+            * Incentives change frequently. Ask each local {data.name} solar company to confirm current programs and show assumptions in writing.
           </p>
         </div>
       </section>
@@ -120,22 +120,21 @@ export default async function StateSolarPage({ params }: Props) {
           </h2>
           <div className="prose prose-sm text-gray-600 space-y-4">
             <p>
-              With an average of <strong>{data.sunHours}</strong> of peak sunlight daily and significant state incentives,
-              {data.name} is one of the better states for solar investment. Most homeowners see full payback within
-              {" "}<strong>{data.payback}</strong>, then enjoy free electricity for the remaining 15–20 years of panel life.
+              With an average of <strong>{data.sunHours}</strong> of peak sunlight daily and state-specific solar rules,
+              {data.name} can still be worth comparing for solar. Payback depends on system size, export credit rules,
+              financing, and current incentives; a common estimate is <strong>{data.payback}</strong>.
             </p>
             <p>
-              The federal Investment Tax Credit (ITC) covers <strong>30% of your total system cost</strong>,
-              and {data.name}-specific programs can add thousands more in savings.
+              Federal solar credit rules changed after 2025, while {data.name}-specific programs may reduce project cost when current rules and eligibility line up.
             </p>
             <p>
               The best way to know if solar makes sense for your specific home is to get a free quote from a local installer.
-              They&apos;ll assess your roof, shade situation, and electricity usage to give you an accurate savings estimate.
+              They&apos;ll assess your roof, shade situation, and electricity usage to give you a project-specific estimate.
             </p>
           </div>
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
             <p className="text-sm font-semibold text-yellow-800 mb-1">
-              💡 Average {data.name} homeowner saves {data.avgSavings} after going solar
+              Average {data.name} solar bill impact estimate: {data.avgSavings}
             </p>
             <p className="text-xs text-yellow-700">Based on average utility rates and system sizes in {data.name}.</p>
           </div>
@@ -150,7 +149,7 @@ export default async function StateSolarPage({ params }: Props) {
             Get Free Solar Quotes in {data.name}
           </h2>
           <p className="text-yellow-100 text-sm mb-6">
-            Compare quotes from vetted local {data.name} solar installers. 100% free, no obligation.
+            Request quote options from local {data.name} solar installers. 100% free to request.
           </p>
           <ZipCodeForm category="solar" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>

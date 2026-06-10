@@ -79,7 +79,7 @@ export default function RoofingPage() {
             <span className="text-red-600">Free Local Estimates</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl">
-            Compare roofing quotes from vetted local contractors. Most homeowners save $3,000–$8,000 by comparing multiple bids.
+            Compare local roofing quotes by material, warranty, schedule, and project scope before you decide.
           </p>
           <ZipCodeForm category="roofing" />
         </div>
@@ -182,7 +182,7 @@ export default function RoofingPage() {
         <div className="max-w-xl mx-auto">
           <Star className="w-10 h-10 text-red-200 mx-auto mb-3" />
           <h2 className="text-2xl font-bold mb-2">Get Free Roofing Estimates Today</h2>
-          <p className="text-red-100 text-sm mb-6">Compare quotes from 3 vetted local roofers. 100% free.</p>
+          <p className="text-red-100 text-sm mb-6">Request local roofing quote options. 100% free to request.</p>
           <ZipCodeForm category="roofing" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>
       </section>

@@ -21,7 +21,7 @@ interface InContentCTAProps {
 export default function InContentCTA({
   category = "solar",
   headline = "Don't Risk It — Get a Free Pro Quote Instead",
-  subtext = "Licensed contractors in your area will compete for your business. 100% free, no obligation.",
+  subtext = "Request local quote options and compare project scope before you decide.",
 }: InContentCTAProps) {
   const router = useRouter()
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
@@ -57,7 +57,7 @@ export default function InContentCTA({
           disabled={isSubmitting}
           className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-5 py-3 rounded-xl transition-colors disabled:opacity-60 whitespace-nowrap"
         >
-          {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Get 3 Free Quotes <ArrowRight className="w-4 h-4" /></>}
+          {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Request Free Quotes <ArrowRight className="w-4 h-4" /></>}
         </button>
       </form>
       {errors.zip && <p className="text-yellow-200 text-xs mt-2">{errors.zip.message}</p>}

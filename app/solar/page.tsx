@@ -4,16 +4,16 @@ import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Solar Panels for Home: Costs, Incentives & Free Quotes (2025)",
+  title: "Solar Panels for Home: Costs, 2026 Incentives & Free Quotes",
   description:
-    "Compare solar panel costs, brand reviews, and incentives by state. Get free quotes from local solar installers. Federal 30% tax credit still available.",
+    "Compare solar panel costs, brand reviews, state incentives, utility rebates, and local quote options. Check current 2026 solar rules before you sign.",
   keywords: ["solar panels", "solar installation cost", "solar quotes", "home solar", "solar tax credit"],
 }
 
 const solarTopics = [
   { title: "Solar Installation Cost by State", href: "/blog/solar-installation-cost-by-state", tag: "Pricing" },
   { title: "How Much Do Solar Panels Save?", href: "/blog/how-much-do-solar-panels-save", tag: "Savings" },
-  { title: "Solar Battery Storage Cost 2025", href: "/blog/solar-battery-storage-cost", tag: "Pricing" },
+  { title: "Solar Battery Storage Cost", href: "/blog/solar-battery-storage-cost", tag: "Pricing" },
   { title: "Solar Rebates & Incentives Guide", href: "/blog/solar-rebates-incentives", tag: "Savings" },
   { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
   { title: "Solar Financing Options", href: "/blog/solar-financing-options", tag: "Guide" },
@@ -45,16 +45,16 @@ const topStates = [
 ]
 
 const stats = [
-  { value: "30%", label: "Federal Tax Credit" },
-  { value: "$1,400+", label: "Avg. Annual Savings" },
+  { value: "Varies", label: "Local Incentives" },
+  { value: "$1,400+", label: "Bill Impact Est." },
   { value: "7–10 yrs", label: "Typical Payback Period" },
   { value: "25+ yrs", label: "Panel Lifespan" },
 ]
 
 const faqs = [
   {
-    q: "How much do solar panels cost in 2025?",
-    a: "The average cost of a residential solar system ranges from $15,000 to $25,000 before incentives. After the 30% federal tax credit, most homeowners pay $10,500–$17,500.",
+    q: "How much do solar panels cost in 2026?",
+    a: "The average cost of a residential solar system often ranges from $15,000 to $25,000 before incentives. Final cost depends on roof size, equipment, utility rules, financing, and any current state or utility programs.",
   },
   {
     q: "Are solar panels worth it if I have a small roof?",
@@ -82,14 +82,14 @@ export default function SolarPage() {
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             Solar Panels for Your Home:<br />
-            <span className="text-yellow-600">Save $1,400+ Per Year</span>
+            <span className="text-yellow-600">Compare Solar Options</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl">
-            The 30% federal tax credit is still available in 2025. Get free quotes from local installers and find out exactly how much you could save.
+            Compare local solar quotes, state incentives, utility rules, and expected production before you decide.
           </p>
           <ZipCodeForm category="solar" />
           <p className="text-sm text-gray-500 mt-3">
-            ✓ Free quotes · ✓ No obligation · ✓ Vetted local installers
+            Free quotes - No obligation - Local project options
           </p>
         </div>
       </section>
@@ -109,11 +109,11 @@ export default function SolarPage() {
       {/* Why Solar */}
       <section className="py-14 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Why Homeowners Are Going Solar in 2025</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Why Homeowners Are Comparing Solar in 2026</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               { title: "Lock in low electricity rates", desc: "As utility prices rise, solar locks in your energy costs for 25+ years." },
-              { title: "30% federal tax credit", desc: "The IRA tax credit covers 30% of your total system cost. Use it before it's phased down." },
+              { title: "State and utility incentives", desc: "Program availability now varies by market, so verify current rules before budgeting around incentives." },
               { title: "Increase home value", desc: "Homes with solar sell for 4–6% more than comparable homes without, according to Zillow." },
               { title: "Net metering pays you", desc: "Many states pay you for excess electricity you send back to the grid." },
             ].map((item) => (

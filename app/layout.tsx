@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
@@ -7,8 +6,6 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
 import MetaPixel from "@/components/analytics/MetaPixel"
 import TrustedForm from "@/components/analytics/TrustedForm"
 import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/config"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +45,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <GoogleAnalytics />
         <MetaPixel />
         <TrustedForm />

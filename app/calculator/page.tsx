@@ -4,7 +4,7 @@ import SolarCalculator from "@/components/tools/SolarCalculator"
 export const metadata: Metadata = {
   title: "Solar Savings Calculator — How Much Can You Save?",
   description:
-    "Use our free solar savings calculator to estimate your payback period, 20-year savings, and federal tax credit. Get a personalized quote in 60 seconds.",
+    "Use our free solar savings calculator to estimate payback, bill impact, state or utility incentives, and quote options under current 2026 solar rules.",
 }
 
 export default function CalculatorPage() {
@@ -17,14 +17,14 @@ export default function CalculatorPage() {
           </span>
           <h1 className="text-4xl font-extrabold text-gray-900 mb-3">Solar Savings Calculator</h1>
           <p className="text-gray-500 text-lg">
-            Enter your details below to see your estimated savings, payback period, and how much the 30% federal tax credit is worth for your home.
+            Enter your details below to estimate solar bill impact, payback, and current local incentive assumptions before requesting quotes.
           </p>
         </div>
 
         <SolarCalculator />
 
         <p className="text-xs text-gray-400 text-center mt-8">
-          Estimates based on national averages. Actual savings vary by location, roof angle, shading, and utility rates.
+          Estimates based on national averages. Actual savings vary by location, roof angle, shading, utility rates, export rules, and current incentive eligibility.
           Always obtain professional site assessments before making purchasing decisions.
         </p>
       </div>

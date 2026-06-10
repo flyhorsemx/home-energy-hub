@@ -4,15 +4,15 @@ import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "HVAC Installation Cost & Free Quotes (2025) | CleverHomeEnergy",
+  title: "HVAC Installation Cost 2026: Rebates, System Prices & Free Quotes",
   description:
-    "Compare HVAC brands, installation costs, and free quotes from local HVAC contractors. Learn about rebates and energy-efficient systems. New system: $5,000–$12,000.",
+    "Compare 2026 HVAC installation costs, heat pump vs furnace options, current rebate checks, and free local quote options before replacing your system.",
 }
 
 const topics = [
-  { title: "HVAC Installation Cost in 2025", href: "/blog/hvac-installation-cost", tag: "Pricing" },
-  { title: "Heat Pump Cost Guide 2025", href: "/blog/heat-pump-cost-guide", tag: "Pricing" },
-  { title: "Best Smart Thermostats 2025", href: "/blog/best-smart-thermostats-2025", tag: "Guide" },
+  { title: "HVAC Installation Cost 2026", href: "/blog/hvac-installation-cost", tag: "Pricing" },
+  { title: "Heat Pump Cost Guide", href: "/blog/heat-pump-cost-guide", tag: "Pricing" },
+  { title: "Best Smart Thermostats", href: "/blog/best-smart-thermostats-2025", tag: "Guide" },
   { title: "Heat Pump vs Gas Furnace", href: "/blog/heat-pump-vs-gas-furnace", tag: "Comparison" },
   { title: "Mini-Split vs Central Air", href: "/blog/mini-split-vs-central-air", tag: "Comparison" },
   { title: "Best HVAC Brands Ranked", href: "/blog/best-hvac-brands", tag: "Comparison" },
@@ -65,7 +65,7 @@ export default function HvacPage() {
             <span className="text-blue-600">Free Local Quotes</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl">
-            A new high-efficiency HVAC system can cut your heating and cooling bills by 20–40%. Compare free quotes from licensed local contractors.
+            Compare HVAC quotes by equipment, efficiency rating, warranty, rebate documentation, and installation scope.
           </p>
           <ZipCodeForm category="hvac" />
         </div>
@@ -75,8 +75,8 @@ export default function HvacPage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
           {[
             { v: "$5K–$12K", l: "Typical System Cost" },
-            { v: "20–40%", l: "Energy Bill Reduction" },
-            { v: "$2,000+", l: "Avg. Annual Savings" },
+            { v: "3", l: "Quotes to Compare" },
+            { v: "Rebate", l: "Eligibility Check" },
             { v: "15–20 yrs", l: "System Lifespan" },
           ].map((s) => (
             <div key={s.l}>
@@ -160,7 +160,7 @@ export default function HvacPage() {
         <div className="max-w-xl mx-auto">
           <Wind className="w-10 h-10 text-blue-200 mx-auto mb-3" />
           <h2 className="text-2xl font-bold mb-2">Get Free HVAC Quotes Today</h2>
-          <p className="text-blue-100 text-sm mb-6">Compare up to 3 quotes from licensed local HVAC contractors.</p>
+          <p className="text-blue-100 text-sm mb-6">Request local HVAC quote options, compare project scope, and ask each contractor to document current rebate assumptions.</p>
           <ZipCodeForm category="hvac" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>
       </section>

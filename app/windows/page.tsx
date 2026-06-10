@@ -4,18 +4,18 @@ import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Energy-Efficient Window Replacement Cost & Free Quotes (2025)",
+  title: "Window Replacement Cost 2026: Compare Types, Rebates & Free Quotes",
   description:
-    "Get free window replacement quotes from local contractors. Compare ENERGY STAR windows, brands, and costs. Cut heating/cooling bills by up to 25%.",
+    "Compare 2026 window replacement costs, window types, ENERGY STAR documentation, current rebate checks, and free local quote options.",
 }
 
 const topics = [
-  { title: "Window Replacement Cost in 2025", href: "/blog/window-replacement-cost", tag: "Pricing" },
+  { title: "Window Replacement Cost 2026", href: "/blog/window-replacement-cost", tag: "Pricing" },
   { title: "Best Energy-Efficient Window Brands", href: "/blog/best-energy-efficient-windows", tag: "Comparison" },
   { title: "Andersen vs Pella Windows", href: "/blog/andersen-vs-pella-windows", tag: "Comparison" },
   { title: "Double vs Triple Pane Windows", href: "/blog/double-vs-triple-pane-windows", tag: "Guide" },
   { title: "Window Replacement Guide", href: "/blog/window-replacement-guide", tag: "Guide" },
-  { title: "ENERGY STAR Window Tax Credits", href: "/blog/energy-star-window-tax-credit", tag: "Savings" },
+  { title: "Window Tax Credit 2026", href: "/blog/energy-star-window-tax-credit", tag: "Savings" },
   { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
   { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
 ]
@@ -60,11 +60,11 @@ export default function WindowsPage() {
             <span className="text-sm font-semibold text-purple-700">Windows & Doors</span>
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Energy-Efficient Window Replacement:<br />
-            <span className="text-purple-600">Cut Bills Up to 25%</span>
+            Window Replacement Cost & Quotes:<br />
+            <span className="text-purple-600">Compare Local Options</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl">
-            Drafty windows waste $300–$500/year in energy. Upgrade to ENERGY STAR certified windows and get free quotes from local installers.
+            Compare window types, local installation costs, ENERGY STAR/NFRC documentation, and current rebate eligibility before you choose a contractor.
           </p>
           <ZipCodeForm category="windows" />
         </div>
@@ -74,9 +74,9 @@ export default function WindowsPage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
           {[
             { v: "$150–$800", l: "Cost Per Window" },
-            { v: "Up to 25%", l: "Energy Savings" },
-            { v: "$300+", l: "Annual Savings Avg." },
-            { v: "30% Tax Credit", l: "ENERGY STAR Windows" },
+            { v: "Varies", l: "Bill Impact" },
+            { v: "Comfort", l: "Draft + Noise Help" },
+            { v: "Rebate Check", l: "Utility + State" },
           ].map((s) => (
             <div key={s.l}>
               <p className="text-2xl font-extrabold">{s.v}</p>
@@ -153,7 +153,7 @@ export default function WindowsPage() {
         <div className="max-w-xl mx-auto">
           <Star className="w-10 h-10 text-purple-200 mx-auto mb-3" />
           <h2 className="text-2xl font-bold mb-2">Get Free Window Replacement Quotes</h2>
-          <p className="text-purple-100 text-sm mb-6">Compare prices from vetted local window installers. Free & no obligation.</p>
+          <p className="text-purple-100 text-sm mb-6">Request local window quote options. Free to request, no obligation.</p>
           <ZipCodeForm category="windows" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>
       </section>

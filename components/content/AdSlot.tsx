@@ -15,7 +15,7 @@ interface AdSlotProps {
  */
 export default function AdSlot({ slot, format = "horizontal", className }: AdSlotProps) {
   const dimensions: Record<string, string> = {
-    horizontal: "h-[90px] min-w-[728px] max-w-full",
+    horizontal: "h-[90px] w-full min-w-0",
     rectangle: "h-[250px] w-[300px]",
     vertical: "h-[600px] w-[160px]",
   }

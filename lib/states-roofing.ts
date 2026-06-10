@@ -14,7 +14,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "High humidity, heat, and Gulf hurricane risk accelerate shingle wear. Impact-resistant shingles or metal roofing can qualify for homeowner's insurance discounts.",
-    incentives: ["Federal 25C credit for cool/energy-efficient roofing", "State Farm/Allstate wind-resistance discounts", "FEMA BRIC grants for storm-resilient roofing in some counties"],
+    incentives: ["Current roofing rebate eligibility should be verified", "State Farm/Allstate wind-resistance discounts", "FEMA BRIC grants for storm-resilient roofing in some counties"],
   },
   alaska: {
     slug: "alaska",
@@ -22,7 +22,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Metal roofing (standing seam) / Steep-pitch asphalt",
     climateNote: "Extreme snow loads and ice dam formation demand steep pitches and metal roofing. Proper insulation under the roof deck is critical to prevent ice dams.",
-    incentives: ["Federal energy efficiency credits for qualifying materials", "Alaska Housing Finance Corporation programs", "USDA Rural Development grants for rural homeowners"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Alaska Housing Finance Corporation programs", "USDA Rural Development grants for rural homeowners"],
   },
   arizona: {
     slug: "arizona",
@@ -30,7 +30,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "25–50 years",
     topMaterial: "Concrete/clay tile / Cool roof coatings / Metal",
     climateNote: "Intense UV, extreme heat, and monsoon storms are the primary challenges. Tile roofs last 50+ years in AZ's dry climate. Cool roof coatings reduce attic temps by 30°F+.",
-    incentives: ["Federal 25C credit for ENERGY STAR cool roofing", "APS/SRP rebates for cool roofs on AC-heavy homes", "AZ property tax exemption for solar-ready roofs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "APS/SRP rebates for cool roofs on AC-heavy homes", "AZ property tax exemption for solar-ready roofs"],
   },
   arkansas: {
     slug: "arkansas",
@@ -38,7 +38,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Tornado alley location means impact resistance is a top priority. Class 4 impact-resistant shingles can reduce insurance premiums by 10–30% in AR.",
-    incentives: ["Federal 25C cool roof credit", "Insurance premium discounts for Class 4 impact shingles", "Entergy Arkansas home improvement financing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance premium discounts for Class 4 impact shingles", "Entergy Arkansas home improvement financing"],
   },
   california: {
     slug: "california",
@@ -46,7 +46,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "25–40 years",
     topMaterial: "Concrete/clay tile / Class A fire-rated asphalt / Metal",
     climateNote: "Wildfire risk drives Class A fire-rated requirements statewide. Cool roofs are required in Title 24 climate zones. Southern CA's dry heat favors long-lasting tile.",
-    incentives: ["Federal 25C credit for ENERGY STAR roofing", "CA Title 24 cool roof compliance (required, not optional)", "PACE financing (CalFirst/Renovate America) for qualified materials"],
+    incentives: ["Current roofing rebate eligibility should be verified", "CA Title 24 cool roof compliance (required, not optional)", "PACE financing (CalFirst/Renovate America) for qualified materials"],
   },
   colorado: {
     slug: "colorado",
@@ -54,7 +54,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Colorado is one of the top hail states in the US. Class 4 impact-resistant shingles are nearly mandatory—insurance savings often offset the cost premium within 3–5 years.",
-    incentives: ["Federal 25C cool roof credit", "Insurance discounts (10–40%) for Class 4 impact-resistant shingles", "Xcel Energy rebates for cool roofing in qualifying projects"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts (10–40%) for Class 4 impact-resistant shingles", "Xcel Energy rebates for cool roofing in qualifying projects"],
   },
   connecticut: {
     slug: "connecticut",
@@ -62,7 +62,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Architectural asphalt shingles / Slate / Metal",
     climateNote: "Ice dams from freeze-thaw cycles are CT's biggest roofing threat. Proper ice-and-water shield under shingles and adequate attic insulation prevent costly damage.",
-    incentives: ["Federal 25C credit for qualifying materials", "CT Green Bank PACE financing", "Eversource/UI weatherization programs that include roofing improvements"],
+    incentives: ["Current roofing rebate eligibility should be verified", "CT Green Bank PACE financing", "Eversource/UI weatherization programs that include roofing improvements"],
   },
   delaware: {
     slug: "delaware",
@@ -70,7 +70,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles",
     climateNote: "Coastal location means wind and salt air exposure. Algae-resistant shingles (Scotchgard-treated) are recommended throughout DE to prevent premature staining.",
-    incentives: ["Federal 25C credit for ENERGY STAR roofing", "Delmarva Power home improvement loans", "Delaware SEAP weatherization assistance"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Delmarva Power home improvement loans", "Delaware SEAP weatherization assistance"],
   },
   florida: {
     slug: "florida",
@@ -78,7 +78,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Concrete tile / Metal (hurricane-rated) / Impact asphalt",
     climateNote: "Hurricane wind ratings (Miami-Dade NOA approval) are legally required in South Florida. Metal and concrete tile roofs rated to 180+ mph are the gold standard.",
-    incentives: ["Federal 25C credit for qualifying materials", "Citizens Insurance premium discounts for wind-rated roofs", "Florida PACE financing for storm-resilient upgrades"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Citizens Insurance premium discounts for wind-rated roofs", "Florida PACE financing for storm-resilient upgrades"],
   },
   georgia: {
     slug: "georgia",
@@ -86,7 +86,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Georgia's heat and humidity breed algae and moss growth. Algae-resistant shingles with zinc strips extend roof life significantly in Atlanta's humid climate.",
-    incentives: ["Federal 25C cool roof credit", "Georgia Power home improvement financing", "Insurance discounts for impact-resistant materials in hail-prone north GA"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Georgia Power home improvement financing", "Insurance discounts for impact-resistant materials in hail-prone north GA"],
   },
   hawaii: {
     slug: "hawaii",
@@ -94,7 +94,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "25–40 years",
     topMaterial: "Metal roofing / Concrete tile",
     climateNote: "Salt air, UV, and tropical rain demand corrosion-resistant materials. Standing seam metal roofs with G-90 galvanized or Galvalume coating last 40–70 years in Hawaii's climate.",
-    incentives: ["Federal 25C credit for cool roofing", "HEI/HECO weatherization programs", "Hawaii Green Infrastructure Loan for energy-efficient roofing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "HEI/HECO weatherization programs", "Hawaii Green Infrastructure Loan for energy-efficient roofing"],
   },
   idaho: {
     slug: "idaho",
@@ -102,7 +102,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Asphalt shingles / Metal",
     climateNote: "Idaho's freeze-thaw cycles and snow loads stress roofs. Standing seam metal roofs shed snow naturally, preventing ice dam damage common with flat-profile shingles.",
-    incentives: ["Federal 25C cool roof credit", "Idaho Power home improvement rebates", "Rocky Mountain Power wattsmart rebates for qualifying upgrades"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Idaho Power home improvement rebates", "Rocky Mountain Power wattsmart rebates for qualifying upgrades"],
   },
   illinois: {
     slug: "illinois",
@@ -110,7 +110,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Class 4 impact-resistant / Metal",
     climateNote: "Illinois sees severe hail, ice dams, and tornado-driven wind damage. Class 4 impact shingles are popular in the Chicago suburbs where hail claims are frequent.",
-    incentives: ["Federal 25C credit for ENERGY STAR roofing", "Insurance discounts for impact-resistant shingles", "ComEd energy efficiency financing programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts for impact-resistant shingles", "ComEd energy efficiency financing programs"],
   },
   indiana: {
     slug: "indiana",
@@ -118,7 +118,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Indiana's hail belt location and severe thunderstorms make impact-resistant shingles a smart upgrade. Ice dams are also common in northern Indiana winters.",
-    incentives: ["Federal 25C cool roof credit", "Insurance premium discounts for impact-resistant materials", "Indiana weatherization assistance programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance premium discounts for impact-resistant materials", "Indiana weatherization assistance programs"],
   },
   iowa: {
     slug: "iowa",
@@ -126,7 +126,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Iowa ranks among the top states for hail damage claims. Class 4 impact-resistant shingles are strongly recommended and often lower insurance premiums by 20–35%.",
-    incentives: ["Federal 25C cool roof credit", "Insurance discounts for Class 4 shingles", "Alliant Energy/MidAmerican home improvement financing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts for Class 4 shingles", "Alliant Energy/MidAmerican home improvement financing"],
   },
   kansas: {
     slug: "kansas",
@@ -134,7 +134,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Kansas is at the heart of Tornado Alley and the US hail belt. Impact-resistant roofing is essential—expect significant insurance savings that offset the cost premium quickly.",
-    incentives: ["Federal 25C cool roof credit", "Insurance premium discounts (often 20–40%) for impact-resistant materials", "Kansas Gas Service financing programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance premium discounts (often 20–40%) for impact-resistant materials", "Kansas Gas Service financing programs"],
   },
   kentucky: {
     slug: "kentucky",
@@ -142,7 +142,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Kentucky's ice storms and freezing rain cause significant roofing damage. Quality ice-and-water shield membrane installation is critical, especially in eastern KY's mountains.",
-    incentives: ["Federal 25C credit for qualifying materials", "LG&E/KU home improvement financing", "Kentucky Weatherization Assistance Program"],
+    incentives: ["Current roofing rebate eligibility should be verified", "LG&E/KU home improvement financing", "Kentucky Weatherization Assistance Program"],
   },
   louisiana: {
     slug: "louisiana",
@@ -150,7 +150,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Metal roofing / Impact-rated asphalt",
     climateNote: "Louisiana's hurricane risk and extreme humidity make metal roofing increasingly popular. Post-Katrina building codes require wind ratings up to 130 mph in coastal areas.",
-    incentives: ["Federal 25C credit for qualifying materials", "Louisiana Citizens/State Farm wind-resistance discounts", "FEMA BRIC mitigation grants for storm-resilient roofing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Louisiana Citizens/State Farm wind-resistance discounts", "FEMA BRIC mitigation grants for storm-resilient roofing"],
   },
   maine: {
     slug: "maine",
@@ -158,7 +158,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Metal roofing (standing seam) / Steep asphalt",
     climateNote: "Maine's heavy snowfall and brutal ice dam conditions demand steep-pitch roofs with proper attic insulation. Metal standing seam is the gold standard for shedding snow safely.",
-    incentives: ["Federal 25C credit for qualifying materials", "Efficiency Maine weatherization programs", "Maine Housing home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Efficiency Maine weatherization programs", "Maine Housing home improvement loans"],
   },
   maryland: {
     slug: "maryland",
@@ -166,7 +166,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Maryland faces northeasters, ice storms, and summer hail. The eastern shore has hurricane exposure. Impact-resistant shingles or metal roofing provide the best all-around protection.",
-    incentives: ["Federal 25C credit for ENERGY STAR roofing", "Maryland Smart Energy Communities grants", "BGE/Pepco weatherization loan programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Maryland Smart Energy Communities grants", "BGE/Pepco weatherization loan programs"],
   },
   massachusetts: {
     slug: "massachusetts",
@@ -174,7 +174,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Architectural asphalt / Metal / Cedar shake",
     climateNote: "Massachusetts northeasters and ice dams are the primary threats. Proper ice-and-water shield from eave to 24 inches past the interior wall is code-required.",
-    incentives: ["Federal 25C cool roof credit", "Mass Save weatherization programs", "MassCEC clean energy loans for energy-efficient roofing materials"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Mass Save weatherization programs", "MassCEC clean energy loans for energy-efficient roofing materials"],
   },
   michigan: {
     slug: "michigan",
@@ -182,7 +182,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "Michigan's lake-effect snow creates massive ice dam problems in the Upper Peninsula and northern Lower Peninsula. Metal roofing with heated cables is increasingly popular near the lakes.",
-    incentives: ["Federal 25C credit for qualifying materials", "DTE Energy Home Performance program financing", "Michigan Saves home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "DTE Energy Home Performance program financing", "Michigan Saves home improvement loans"],
   },
   minnesota: {
     slug: "minnesota",
@@ -190,7 +190,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Metal roofing / Ice-dam resistant asphalt",
     climateNote: "Minnesota's ice dams cause millions in annual damage. A complete solution requires adequate attic insulation, air sealing, and ventilation—not just better shingles.",
-    incentives: ["Federal 25C credit for qualifying materials", "Xcel Energy/CenterPoint weatherization rebates", "MN Housing Finance Agency home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Xcel Energy/CenterPoint weatherization rebates", "MN Housing Finance Agency home improvement loans"],
   },
   mississippi: {
     slug: "mississippi",
@@ -198,7 +198,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "Mississippi's Gulf Coast faces hurricane risk; inland areas see tornado and hail damage. Impact-resistant materials throughout the state can significantly reduce insurance costs.",
-    incentives: ["Federal 25C credit for qualifying materials", "Mississippi Emergency Management Agency mitigation grants", "Insurance discounts for impact-resistant roofing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Mississippi Emergency Management Agency mitigation grants", "Insurance discounts for impact-resistant roofing"],
   },
   missouri: {
     slug: "missouri",
@@ -206,7 +206,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Missouri sits in tornado alley and sees frequent severe hail. Joplin and St. Louis areas have high hail claim rates—Class 4 shingles are a must for cost-conscious homeowners.",
-    incentives: ["Federal 25C cool roof credit", "Insurance premium discounts for impact-resistant materials", "Ameren Missouri home improvement financing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance premium discounts for impact-resistant materials", "Ameren Missouri home improvement financing"],
   },
   montana: {
     slug: "montana",
@@ -214,7 +214,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "25–40 years",
     topMaterial: "Metal roofing (standing seam) / Steep-pitch asphalt",
     climateNote: "Montana's heavy snowfall demands steep roof pitches and strong structural support. Standing seam metal is the preferred choice for mountain regions due to snow shedding.",
-    incentives: ["Federal 25C credit for qualifying materials", "NorthWestern Energy weatherization programs", "Montana DPHHS Weatherization Assistance Program"],
+    incentives: ["Current roofing rebate eligibility should be verified", "NorthWestern Energy weatherization programs", "Montana DPHHS Weatherization Assistance Program"],
   },
   nebraska: {
     slug: "nebraska",
@@ -222,7 +222,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Nebraska regularly sees golf ball-sized and larger hail. Omaha and Lincoln homeowners frequently file multiple hail claims per decade—impact-resistant roofing is essential.",
-    incentives: ["Federal 25C cool roof credit", "Insurance discounts for Class 4 shingles", "Nebraska Energy Office weatherization assistance"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts for Class 4 shingles", "Nebraska Energy Office weatherization assistance"],
   },
   nevada: {
     slug: "nevada",
@@ -230,7 +230,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "30–50 years",
     topMaterial: "Concrete/clay tile / Metal / TPO flat roofing",
     climateNote: "Nevada's extreme UV, heat, and minimal rainfall mean roofs last much longer than in humid states. Tile roofs built in the 1980s still perform well in Las Vegas.",
-    incentives: ["Federal 25C credit for ENERGY STAR cool roofing", "NV Energy cool roof rebates", "Nevada Housing Division weatherization programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "NV Energy cool roof rebates", "Nevada Housing Division weatherization programs"],
   },
   "new-hampshire": {
     slug: "new-hampshire",
@@ -238,7 +238,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Metal roofing / Architectural asphalt",
     climateNote: "NH's heavy snowfall and ice storms make ice dams a major concern. Metal roofing on proper standoffs allows ventilation that prevents ice dam formation.",
-    incentives: ["Federal 25C credit for qualifying materials", "NH Electric Co-op weatherization programs", "NH Housing HELP loan program"],
+    incentives: ["Current roofing rebate eligibility should be verified", "NH Electric Co-op weatherization programs", "NH Housing HELP loan program"],
   },
   "new-jersey": {
     slug: "new-jersey",
@@ -246,7 +246,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "NJ coastal areas face nor'easter damage and wind; inland areas see ice dams. Post-Sandy building codes require improved wind resistance ratings for coastal homes.",
-    incentives: ["Federal 25C credit for qualifying materials", "NJ Clean Energy Program weatherization financing", "PSE&G/JCP&L home performance loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "NJ Clean Energy Program weatherization financing", "PSE&G/JCP&L home performance loans"],
   },
   "new-mexico": {
     slug: "new-mexico",
@@ -254,7 +254,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "30–50 years",
     topMaterial: "Flat/low-slope roofing / Tile / Metal",
     climateNote: "New Mexico's adobe architectural tradition uses flat/low-slope roofs that require quality TPO or modified bitumen. Santa Fe and Taos see surprising snow loads.",
-    incentives: ["Federal 25C credit for cool/energy-efficient roofing", "PNM weatherization assistance", "NM Mortgage Finance Authority home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "PNM weatherization assistance", "NM Mortgage Finance Authority home improvement loans"],
   },
   "new-york": {
     slug: "new-york",
@@ -262,7 +262,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal / Slate",
     climateNote: "NYC faces wind and nor'easters; upstate NY deals with heavy lake-effect snow and ice dams. Slate roofs from the 1800s still cap many upstate homes—repairs require specialty contractors.",
-    incentives: ["Federal 25C credit for qualifying materials", "NYSERDA home performance loans", "Con Edison/National Grid weatherization rebates"],
+    incentives: ["Current roofing rebate eligibility should be verified", "NYSERDA home performance loans", "Con Edison/National Grid weatherization rebates"],
   },
   "north-carolina": {
     slug: "north-carolina",
@@ -270,7 +270,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt shingles / Metal",
     climateNote: "Eastern NC faces hurricane wind and rain; western NC sees ice storms and hail. Coastal building codes mandate higher wind ratings; algae-resistant shingles are essential statewide.",
-    incentives: ["Federal 25C cool roof credit", "Duke Energy Carolinas rebates for qualifying upgrades", "NC Housing Finance Agency home repair loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Duke Energy Carolinas rebates for qualifying upgrades", "NC Housing Finance Agency home repair loans"],
   },
   "north-dakota": {
     slug: "north-dakota",
@@ -278,7 +278,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Impact-resistant asphalt / Metal",
     climateNote: "North Dakota faces extreme cold, heavy snow, and severe hail. Metal roofing handles all three threats—snow sheds naturally, hail doesn't dent standing seam, and cold doesn't crack it.",
-    incentives: ["Federal 25C credit for qualifying materials", "MDU Resources home improvement programs", "ND Housing Finance Agency weatherization assistance"],
+    incentives: ["Current roofing rebate eligibility should be verified", "MDU Resources home improvement programs", "ND Housing Finance Agency weatherization assistance"],
   },
   ohio: {
     slug: "ohio",
@@ -286,7 +286,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Class 4 impact-resistant / Metal",
     climateNote: "Ohio's combination of hail, ice dams, and high winds makes impact-resistant shingles a smart investment. Lake-effect snow in northern Ohio creates severe ice dam conditions.",
-    incentives: ["Federal 25C credit for ENERGY STAR roofing", "AEP Ohio home performance financing", "Ohio Housing Finance Agency weatherization programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "AEP Ohio home performance financing", "Ohio Housing Finance Agency weatherization programs"],
   },
   oklahoma: {
     slug: "oklahoma",
@@ -294,7 +294,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal",
     climateNote: "Oklahoma City and Tulsa are in the most hail-damaged corridors in the US. Class 4 impact shingles often pay for themselves in one insurance cycle—ask your insurer for discounts.",
-    incentives: ["Federal 25C cool roof credit", "Insurance discounts up to 40% for Class 4 impact-rated shingles", "OG&E/PSO home improvement financing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts up to 40% for Class 4 impact-rated shingles", "OG&E/PSO home improvement financing"],
   },
   oregon: {
     slug: "oregon",
@@ -302,7 +302,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Composition shingles / Metal / Cedar (western OR)",
     climateNote: "Oregon's heavy rainfall promotes moss and algae growth—the #1 roofing issue in the Pacific Northwest. Zinc strips, algae-resistant shingles, and annual moss treatments extend roof life.",
-    incentives: ["Federal 25C credit for qualifying materials", "Energy Trust of Oregon weatherization loans", "Portland General Electric home performance rebates"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Energy Trust of Oregon weatherization loans", "Portland General Electric home performance rebates"],
   },
   pennsylvania: {
     slug: "pennsylvania",
@@ -310,7 +310,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Slate (historic) / Metal",
     climateNote: "Pennsylvania ice storms and lake-effect snow in the northwest cause significant damage. Philadelphia sees nor'easters. Ice-and-water shield is code-required from eave to 24\" past interior wall.",
-    incentives: ["Federal 25C credit for qualifying materials", "PPL/PECO home performance financing", "Pennsylvania Housing Finance Agency home repair loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "PPL/PECO home performance financing", "Pennsylvania Housing Finance Agency home repair loans"],
   },
   "rhode-island": {
     slug: "rhode-island",
@@ -318,7 +318,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal / Cedar shake",
     climateNote: "Rhode Island's coastal exposure to nor'easters and hurricanes demands high wind-rated roofing. Historic Providence neighborhoods favor cedar shake and slate replicas for aesthetics.",
-    incentives: ["Federal 25C credit for qualifying materials", "RI Energy weatherization financing", "RI Housing home repair loan programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "RI Energy weatherization financing", "RI Housing home repair loan programs"],
   },
   "south-carolina": {
     slug: "south-carolina",
@@ -326,7 +326,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "SC's coastal areas (Charleston, Myrtle Beach) require hurricane-rated roofing. Inland SC sees hail and tornado damage. Algae-resistant shingles are essential in SC's humid climate.",
-    incentives: ["Federal 25C credit for qualifying materials", "Duke Energy/Dominion SC rebates for qualifying upgrades", "SC Housing home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Duke Energy/Dominion SC rebates for qualifying upgrades", "SC Housing home improvement loans"],
   },
   "south-dakota": {
     slug: "south-dakota",
@@ -334,7 +334,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Impact-resistant asphalt / Metal",
     climateNote: "South Dakota ranks among the highest in per-capita hail damage nationally. Class 4 impact shingles or metal roofing are the two best choices for long-term value here.",
-    incentives: ["Federal 25C credit for qualifying materials", "Insurance discounts for impact-resistant materials", "SD Housing Development Authority weatherization assistance"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts for impact-resistant materials", "SD Housing Development Authority weatherization assistance"],
   },
   tennessee: {
     slug: "tennessee",
@@ -342,7 +342,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "Tennessee tornadoes and severe thunderstorms frequently damage roofs; winter ice storms threaten in east TN mountains. Algae-resistant shingles are recommended statewide for humid summers.",
-    incentives: ["Federal 25C credit for qualifying materials", "TVA EnergyRight weatherization programs", "Tennessee Housing Development Agency home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "TVA EnergyRight weatherization programs", "Tennessee Housing Development Agency home improvement loans"],
   },
   texas: {
     slug: "texas",
@@ -350,7 +350,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Class 4 impact-resistant asphalt / Metal / Tile (South TX)",
     climateNote: "Texas hail claims top $1 billion annually in DFW and Houston metro areas. Class 4 shingles are nearly universal in North TX; concrete tile dominates South TX; metal is gaining everywhere.",
-    incentives: ["Federal 25C credit for ENERGY STAR cool roofing", "Insurance discounts up to 30% for Class 4 impact shingles", "Austin Energy cool roof rebates", "Texas PACE financing"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Insurance discounts up to 30% for Class 4 impact shingles", "Austin Energy cool roof rebates", "Texas PACE financing"],
   },
   utah: {
     slug: "utah",
@@ -358,7 +358,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Metal / Tile / Impact-resistant asphalt",
     climateNote: "Utah's high altitude brings intense UV, hail, and snow. Metal and tile last longest in Utah's climate; Salt Lake Valley sees frequent hail—Class 4 shingles are popular.",
-    incentives: ["Federal 25C credit for qualifying materials", "Rocky Mountain Power home improvement financing", "Utah Housing weatherization assistance programs"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Rocky Mountain Power home improvement financing", "Utah Housing weatherization assistance programs"],
   },
   vermont: {
     slug: "vermont",
@@ -366,7 +366,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Metal roofing / Steep-pitch architectural asphalt",
     climateNote: "Vermont's legendary snow loads—up to 100 lbs/sq ft in the mountains—demand engineered roof structures. Metal standing seam is increasingly chosen for snow shedding and longevity.",
-    incentives: ["Federal 25C credit for qualifying materials", "Efficiency Vermont weatherization programs", "Vermont Housing Finance Agency home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Efficiency Vermont weatherization programs", "Vermont Housing Finance Agency home improvement loans"],
   },
   virginia: {
     slug: "virginia",
@@ -374,7 +374,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "Virginia Beach and eastern VA face hurricane season threats; northern VA gets nor'easters and ice storms; southwest VA sees heavy snow. Wind-rated shingles are recommended coastally.",
-    incentives: ["Federal 25C credit for qualifying materials", "Dominion Energy VA home improvement financing", "Virginia Housing home repair loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Dominion Energy VA home improvement financing", "Virginia Housing home repair loans"],
   },
   washington: {
     slug: "washington",
@@ -382,7 +382,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Composition (asphalt) / Metal / Cedar (Puget Sound)",
     climateNote: "Seattle's constant rain promotes moss and algae growth—treat annually with zinc sulfate solution or install zinc strips. East Washington is drier with hail and snow concerns.",
-    incentives: ["Federal 25C credit for qualifying materials", "Puget Sound Energy home performance financing", "Washington State Weatherization Assistance Program"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Puget Sound Energy home performance financing", "Washington State Weatherization Assistance Program"],
   },
   "west-virginia": {
     slug: "west-virginia",
@@ -390,7 +390,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–25 years",
     topMaterial: "Architectural asphalt / Metal",
     climateNote: "West Virginia's mountainous terrain means steep roofs, heavy snow loads, and ice dam risk at elevation. Flooding from mountain runoff can also damage fascia and soffits.",
-    incentives: ["Federal 25C credit for qualifying materials", "Appalachian Power home improvement financing", "WV Housing Development Fund weatherization loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Appalachian Power home improvement financing", "WV Housing Development Fund weatherization loans"],
   },
   wisconsin: {
     slug: "wisconsin",
@@ -398,7 +398,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–30 years",
     topMaterial: "Metal / Ice-dam resistant architectural asphalt",
     climateNote: "Wisconsin sees heavy lake-effect snow near Green Bay and Milwaukee and severe hail inland. Ice dams are extremely common—proper attic ventilation and insulation are as important as the shingles.",
-    incentives: ["Federal 25C credit for qualifying materials", "Focus on Energy weatherization rebates", "Wisconsin Housing Economic Development Authority home improvement loans"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Focus on Energy weatherization rebates", "Wisconsin Housing Economic Development Authority home improvement loans"],
   },
   wyoming: {
     slug: "wyoming",
@@ -406,7 +406,7 @@ export const ROOFING_STATES: Record<string, RoofingStateData> = {
     avgLifespan: "20–35 years",
     topMaterial: "Metal (standing seam) / Class 4 impact-resistant asphalt",
     climateNote: "Wyoming's Chinook winds, heavy snow, and severe hail make metal roofing the top choice. Cheyenne and Casper see frequent hail; mountain areas deal with extreme snow loads.",
-    incentives: ["Federal 25C credit for qualifying materials", "Rocky Mountain Power weatherization programs", "Wyoming Community Development Authority home improvement assistance"],
+    incentives: ["Current roofing rebate eligibility should be verified", "Rocky Mountain Power weatherization programs", "Wyoming Community Development Authority home improvement assistance"],
   },
 }
 

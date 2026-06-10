@@ -15,7 +15,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency central AC (18+ SEER2) + heat pump",
     climateNote: "Hot, humid summers dominate energy costs. A high-SEER heat pump handles mild winters efficiently while keeping cooling costs low.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "TVA EnergyRight Rebates up to $600", "Alabama Power efficiency rebates", "Net Metering credits"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "TVA EnergyRight Rebates up to $600", "Alabama Power efficiency rebates", "Net Metering credits"],
     avgPayback: "7–10 years",
   },
   alaska: {
@@ -24,7 +24,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$400–$800/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) or boiler + ERV",
     climateNote: "Extreme cold means heating dominates. Cold-climate heat pumps (rated to -13°F) are increasingly viable in Anchorage and Juneau.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Alaska Housing Finance Corp rebates", "AEA Renewable Energy Fund programs", "Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Alaska Housing Finance Corp rebates", "AEA Renewable Energy Fund programs", "Weatherization Assistance Program"],
     avgPayback: "12–18 years",
   },
   arizona: {
@@ -33,7 +33,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-SEER2 central AC (20+ SEER2) with two-stage compressor",
     climateNote: "Cooling dominates 9+ months per year. Two-stage or variable-speed compressors dramatically cut runtime hours and bills in Phoenix-area heat.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "APS Cool Energy Rebate up to $500", "SRP Home Performance Rebate", "Salt River Project AC rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "APS Cool Energy Rebate up to $500", "SRP Home Performance Rebate", "Salt River Project AC rebates"],
     avgPayback: "6–9 years",
   },
   arkansas: {
@@ -42,7 +42,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "Dual-fuel heat pump (electric + gas backup)",
     climateNote: "Hot summers and cold winters make dual-fuel heat pumps ideal—electric efficiency for mild weather, gas for extreme cold snaps.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Entergy Arkansas efficiency rebates", "Arkansas Oklahoma Gas rebates", "Weatherization assistance programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Entergy Arkansas efficiency rebates", "Arkansas Oklahoma Gas rebates", "Weatherization assistance programs"],
     avgPayback: "7–10 years",
   },
   california: {
@@ -51,7 +51,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$500–$900/yr",
     recommendedSystem: "Variable-speed mini-split heat pump system",
     climateNote: "California's varied climates mean mini-splits excel—cooling coastal areas and heating inland valleys efficiently without ductwork losses.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "TECH Clean California Rebate up to $3,000", "PG&E/SCE/SDG&E efficiency rebates", "SGIP incentives for heat pumps"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "TECH Clean California Rebate up to $3,000", "PG&E/SCE/SDG&E efficiency rebates", "SGIP incentives for heat pumps"],
     avgPayback: "7–10 years",
   },
   colorado: {
@@ -60,7 +60,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "Cold-climate heat pump + gas furnace backup (dual-fuel)",
     climateNote: "Colorado's altitude and temperature swings favor dual-fuel systems. Heat pump handles the 250+ mild days; gas furnace covers blizzard conditions.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Xcel Energy Heat Pump Rebate up to $1,200", "Colorado Energy Office incentives", "Black Hills Energy rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Xcel Energy Heat Pump Rebate up to $1,200", "Colorado Energy Office incentives", "Black Hills Energy rebates"],
     avgPayback: "7–10 years",
   },
   connecticut: {
@@ -69,7 +69,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$800–$1,200/yr",
     recommendedSystem: "Cold-climate heat pump (Mitsubishi/Bosch rated to -13°F)",
     climateNote: "CT's high electricity costs make efficient heat pumps especially valuable. Cold-climate models handle CT winters without auxiliary resistance heat.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "CT Energize program rebates up to $3,000", "Eversource/United Illuminating rebates", "Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "CT Energize program rebates up to $3,000", "Eversource/United Illuminating rebates", "Weatherization Assistance Program"],
     avgPayback: "7–10 years",
   },
   delaware: {
@@ -78,7 +78,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "Air-source heat pump (17+ SEER2 / 9+ HSPF2)",
     climateNote: "Delaware's mixed climate is near-ideal for heat pumps. Moderate winters rarely push temps below 0°F, so standard heat pumps work well year-round.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Delmarva Power rebates", "Delaware SEAP (State Energy Assistance)", "Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Delmarva Power rebates", "Delaware SEAP (State Energy Assistance)", "Weatherization Assistance Program"],
     avgPayback: "6–9 years",
   },
   florida: {
@@ -87,7 +87,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,200/yr",
     recommendedSystem: "High-efficiency central AC (18–20 SEER2) with variable-speed air handler",
     climateNote: "Florida's year-round heat makes SEER2 rating critical. Variable-speed systems run at partial capacity most of the time, slashing electricity bills.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "FPL/Duke Energy efficiency rebates", "TECO/JEA Home Energy programs", "Florida PACE financing programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "FPL/Duke Energy efficiency rebates", "TECO/JEA Home Energy programs", "Florida PACE financing programs"],
     avgPayback: "6–9 years",
   },
   georgia: {
@@ -96,7 +96,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Heat pump (17+ SEER2) with gas backup for colder north GA",
     climateNote: "Atlanta-area summers are brutal. Heat pumps handle both cooling and mild Georgia winters efficiently; north Georgia may benefit from gas backup.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Georgia Power Home Energy Improvement rebates", "Atlanta Gas Light rebates", "Weatherization programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Georgia Power Home Energy Improvement rebates", "Atlanta Gas Light rebates", "Weatherization programs"],
     avgPayback: "7–9 years",
   },
   hawaii: {
@@ -105,7 +105,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$400–$700/yr",
     recommendedSystem: "Ductless mini-split AC/heat pump (inverter type)",
     climateNote: "Hawaii's mild, tropical climate means small, targeted mini-splits are ideal. Full central systems are rarely needed—zone cooling cuts bills significantly.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "HEI/HECO Home Energy Check rebates", "Hawaii Green Infrastructure Loan", "Hawaiian Electric efficiency programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "HEI/HECO Home Energy Check rebates", "Hawaii Green Infrastructure Loan", "Hawaiian Electric efficiency programs"],
     avgPayback: "8–12 years",
   },
   idaho: {
@@ -114,7 +114,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "Dual-fuel heat pump with high-efficiency furnace backup",
     climateNote: "Southern Idaho summers are hot; northern Idaho winters are cold. Dual-fuel systems maximize efficiency across Idaho's wide temperature range.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Rocky Mountain Power Home Improvement rebates", "Avista Utilities efficiency rebates", "Idaho Power AC/heat pump rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Rocky Mountain Power Home Improvement rebates", "Avista Utilities efficiency rebates", "Idaho Power AC/heat pump rebates"],
     avgPayback: "8–11 years",
   },
   illinois: {
@@ -123,7 +123,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + 16+ SEER2 central AC",
     climateNote: "Chicago-area winters demand a powerful furnace. Pair it with a high-SEER AC for summer efficiency—the combo beats a heat pump alone in extreme cold.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "ComEd/Nicor Gas efficiency rebates up to $500", "Illinois Home Weatherization Program", "ENERGY STAR rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "ComEd/Nicor Gas efficiency rebates up to $500", "Illinois Home Weatherization Program", "ENERGY STAR rebates"],
     avgPayback: "7–10 years",
   },
   indiana: {
@@ -132,7 +132,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,000/yr",
     recommendedSystem: "High-efficiency furnace + central AC, or heat pump with aux heat",
     climateNote: "Indiana's cold winters and hot summers are handled well by either a dual-fuel heat pump or a separate high-efficiency furnace + AC combo.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Duke Energy/AES Indiana rebates", "Vectren/CenterPoint rebates", "Indiana Housing Community Development Authority programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Duke Energy/AES Indiana rebates", "Vectren/CenterPoint rebates", "Indiana Housing Community Development Authority programs"],
     avgPayback: "7–10 years",
   },
   iowa: {
@@ -141,7 +141,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency gas furnace (96+ AFUE) + 16+ SEER2 central AC",
     climateNote: "Iowa's harsh winters with frequent sub-zero temps make a high-efficiency gas furnace essential. Add a high-SEER AC for hot, humid summers.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "MidAmerican/Alliant Energy rebates up to $400", "Iowa Weatherization Assistance Program", "Black Hills Energy rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "MidAmerican/Alliant Energy rebates up to $400", "Iowa Weatherization Assistance Program", "Black Hills Energy rebates"],
     avgPayback: "8–11 years",
   },
   kansas: {
@@ -150,7 +150,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Dual-fuel heat pump or high-efficiency furnace + 17+ SEER2 AC",
     climateNote: "Kansas sees triple-digit summers and teens-or-below winters. A dual-fuel system handles both extremes efficiently, with gas backup for the coldest nights.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Evergy Home Efficiency rebates", "Kansas Gas Service rebates", "Kansas Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Evergy Home Efficiency rebates", "Kansas Gas Service rebates", "Kansas Weatherization Assistance Program"],
     avgPayback: "7–10 years",
   },
   kentucky: {
@@ -159,7 +159,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "Heat pump with auxiliary electric or gas backup",
     climateNote: "Kentucky's climate sits in the mixed zone where heat pumps shine. Cold snaps push for a backup system, but mild temps dominate most of the heating season.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "LG&E/KU Energy efficiency rebates", "Kentucky Utilities rebates", "Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "LG&E/KU Energy efficiency rebates", "Kentucky Utilities rebates", "Weatherization Assistance Program"],
     avgPayback: "7–10 years",
   },
   louisiana: {
@@ -168,7 +168,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency central AC (18+ SEER2) + heat pump",
     climateNote: "Louisiana's oppressive humidity and heat require top-tier cooling efficiency. Variable-speed systems maintain consistent dehumidification for comfort.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Entergy Louisiana efficiency rebates", "CLECO rebates", "Louisiana Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Entergy Louisiana efficiency rebates", "CLECO rebates", "Louisiana Weatherization Assistance Program"],
     avgPayback: "6–9 years",
   },
   maine: {
@@ -177,7 +177,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "Cold-climate heat pump (Mitsubishi Hyper-Heat) + oil/propane backup",
     climateNote: "Maine's cold winters historically relied on oil heat. Modern cold-climate heat pumps now work efficiently to -13°F+, dramatically cutting expensive oil use.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Efficiency Maine Heat Pump Rebate up to $2,000", "Home Energy Loan Program", "EmPower Maine low-income programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Efficiency Maine Heat Pump Rebate up to $2,000", "Home Energy Loan Program", "EmPower Maine low-income programs"],
     avgPayback: "8–12 years",
   },
   maryland: {
@@ -186,7 +186,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "Air-source heat pump (17+ SEER2 / 9+ HSPF2)",
     climateNote: "Maryland's mixed climate is ideal for heat pumps. Baltimore winters rarely drop below 10°F for extended periods, so standard heat pumps work efficiently.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "BGE/Pepco/Delmarva rebates up to $600", "Maryland CleanEnergy Center programs", "EmPower Maryland low-income rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "BGE/Pepco/Delmarva rebates up to $600", "Maryland CleanEnergy Center programs", "EmPower Maryland low-income rebates"],
     avgPayback: "6–9 years",
   },
   massachusetts: {
@@ -195,7 +195,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$800–$1,200/yr",
     recommendedSystem: "Cold-climate heat pump (rated -13°F+) with backup heat",
     climateNote: "MA's high electricity rates make efficiency critical. Mass Save cold-climate heat pump incentives are among the most generous in the nation.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Mass Save Heat Pump Rebate up to $10,000", "Green Communities grants", "MassCEC rebates and loans"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Mass Save Heat Pump Rebate up to $10,000", "Green Communities grants", "MassCEC rebates and loans"],
     avgPayback: "7–10 years",
   },
   michigan: {
@@ -204,7 +204,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + 16+ SEER2 AC, or dual-fuel heat pump",
     climateNote: "Michigan winters are long and cold. A 96% AFUE furnace paired with efficient AC is proven here, though dual-fuel heat pumps are gaining ground.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "DTE Energy efficiency rebates", "Consumers Energy rebates up to $500", "Michigan Saves financing program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "DTE Energy efficiency rebates", "Consumers Energy rebates up to $500", "Michigan Saves financing program"],
     avgPayback: "7–10 years",
   },
   minnesota: {
@@ -213,7 +213,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency gas furnace (98 AFUE) + 16 SEER2 AC",
     climateNote: "Minnesota's extreme cold (regularly -20°F+) makes a top-tier furnace essential. Cold-climate heat pumps are gaining traction but gas backup remains critical.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Xcel Energy rebates up to $600", "CenterPoint Energy rebates", "MN Commerce Department energy programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Xcel Energy rebates up to $600", "CenterPoint Energy rebates", "MN Commerce Department energy programs"],
     avgPayback: "8–12 years",
   },
   mississippi: {
@@ -222,7 +222,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,000/yr",
     recommendedSystem: "High-efficiency central AC (18+ SEER2) + heat pump",
     climateNote: "Mississippi's hot, humid climate means cooling is the primary cost driver. Heat pumps cover mild winters efficiently with no need for gas backup.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Entergy Mississippi rebates", "TVA EnergyRight rebates", "MEMA Weatherization Assistance"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Entergy Mississippi rebates", "TVA EnergyRight rebates", "MEMA Weatherization Assistance"],
     avgPayback: "7–10 years",
   },
   missouri: {
@@ -231,7 +231,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Dual-fuel heat pump (electric + gas backup)",
     climateNote: "Missouri's hot summers and cold winters make dual-fuel systems the top choice. Electric heat pump runs most of the year; gas kicks in for polar vortex events.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Ameren Missouri efficiency rebates", "Evergy rebates", "Kansas City Power & Light programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Ameren Missouri efficiency rebates", "Evergy rebates", "Kansas City Power & Light programs"],
     avgPayback: "7–10 years",
   },
   montana: {
@@ -240,7 +240,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + supplemental cold-climate heat pump",
     climateNote: "Montana winters are severe. A high-efficiency gas/propane furnace is the backbone; cold-climate mini-splits can handle fall/spring shoulder seasons efficiently.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "NorthWestern Energy rebates", "Montana DPHHS Weatherization Program", "USDA Rural Energy programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "NorthWestern Energy rebates", "Montana DPHHS Weatherization Program", "USDA Rural Energy programs"],
     avgPayback: "9–13 years",
   },
   nebraska: {
@@ -249,7 +249,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,000/yr",
     recommendedSystem: "Dual-fuel heat pump or high-efficiency furnace + 16+ SEER2 AC",
     climateNote: "Nebraska's hail and tornado seasons stress equipment. Invest in protected outdoor units; dual-fuel systems handle both hot summers and frigid winters.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "LES/OPPD efficiency rebates", "Black Hills Energy rebates", "Nebraska Energy Office programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "LES/OPPD efficiency rebates", "Black Hills Energy rebates", "Nebraska Energy Office programs"],
     avgPayback: "8–11 years",
   },
   nevada: {
@@ -258,7 +258,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-SEER2 central AC (20+ SEER2) with two-stage or variable-speed",
     climateNote: "Nevada's dry desert heat means AC runs hard from April to October. Higher SEER2 ratings pay back quickly given the extreme cooling load.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "NV Energy Home Energy Savings rebates", "Southwest Gas rebates", "Nevada Housing Division programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "NV Energy Home Energy Savings rebates", "Southwest Gas rebates", "Nevada Housing Division programs"],
     avgPayback: "7–10 years",
   },
   "new-hampshire": {
@@ -267,7 +267,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$750–$1,150/yr",
     recommendedSystem: "Cold-climate heat pump (Mitsubishi/Bosch) + oil or propane backup",
     climateNote: "NH's high oil heating costs make cold-climate heat pumps highly attractive. Modern units handle NH winters down to -13°F, cutting expensive oil use significantly.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "NH Electric Co-op rebates", "Eversource Energy Efficiency rebates", "NHEC cold climate HP program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "NH Electric Co-op rebates", "Eversource Energy Efficiency rebates", "NHEC cold climate HP program"],
     avgPayback: "7–10 years",
   },
   "new-jersey": {
@@ -276,7 +276,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$750–$1,150/yr",
     recommendedSystem: "Air-source heat pump (17+ SEER2) with gas backup",
     climateNote: "New Jersey's mixed climate is excellent for heat pumps. High electricity costs make efficiency critical; NJ offers strong incentives to offset upfront costs.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "NJ Clean Energy Warm Advantage rebates up to $500", "PSE&G/JCP&L rebates", "NJ SmartStart rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "NJ Clean Energy Warm Advantage rebates up to $500", "PSE&G/JCP&L rebates", "NJ SmartStart rebates"],
     avgPayback: "6–9 years",
   },
   "new-mexico": {
@@ -285,7 +285,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "High-efficiency heat pump (17+ SEER2) with evaporative cooler for summer",
     climateNote: "New Mexico's dry heat and mild winters make heat pumps highly efficient. Evaporative coolers are cost-effective in the driest climates (Albuquerque/Las Cruces).",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "PNM rebates", "El Paso Electric rebates", "NM Gas Company rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "PNM rebates", "El Paso Electric rebates", "NM Gas Company rebates"],
     avgPayback: "7–10 years",
   },
   "new-york": {
@@ -294,7 +294,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$800–$1,200/yr",
     recommendedSystem: "Cold-climate heat pump + gas or electric backup",
     climateNote: "NYC and downstate NY are ideal for heat pumps; upstate NY needs cold-climate models. NY's high utility rates make every efficiency point valuable.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "NYSERDA Heat Pump Rebate up to $4,000", "Con Edison rebates", "National Grid rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "NYSERDA Heat Pump Rebate up to $4,000", "Con Edison rebates", "National Grid rebates"],
     avgPayback: "7–10 years",
   },
   "north-carolina": {
@@ -303,7 +303,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Heat pump (17+ SEER2 / 9+ HSPF2) — ideal climate match",
     climateNote: "North Carolina is one of the best heat pump states in the country. Mild winters and hot summers make heat pumps outperform gas systems in nearly every case.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Duke Energy Progress efficiency rebates", "Dominion Energy NC rebates", "NC GreenPower incentives"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Duke Energy Progress efficiency rebates", "Dominion Energy NC rebates", "NC GreenPower incentives"],
     avgPayback: "6–9 years",
   },
   "north-dakota": {
@@ -312,7 +312,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency gas furnace (98 AFUE) — extreme cold climate",
     climateNote: "North Dakota regularly hits -30°F. A 98% AFUE gas furnace is the primary system; cold-climate heat pumps can supplement in milder weather to reduce gas use.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "MDU Resources rebates", "Xcel Energy ND rebates", "ND Housing Finance Agency programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "MDU Resources rebates", "Xcel Energy ND rebates", "ND Housing Finance Agency programs"],
     avgPayback: "10–14 years",
   },
   ohio: {
@@ -321,7 +321,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + 16+ SEER2 AC, or dual-fuel heat pump",
     climateNote: "Ohio winters are cold and cloudy. A high-efficiency furnace + AC remains popular, though dual-fuel heat pumps offer greater long-term savings.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "AEP Ohio efficiency rebates", "Columbia Gas of Ohio rebates", "Dominion Energy Ohio rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "AEP Ohio efficiency rebates", "Columbia Gas of Ohio rebates", "Dominion Energy Ohio rebates"],
     avgPayback: "7–10 years",
   },
   oklahoma: {
@@ -330,7 +330,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Dual-fuel heat pump or high-efficiency furnace + 17+ SEER2 AC",
     climateNote: "Oklahoma's severe thunderstorms and wide temperature swings demand a durable, flexible system. Dual-fuel covers summer heat and winter ice storms efficiently.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "OG&E SmartHours rebates", "PSO/AEP Oklahoma rebates", "Oklahoma Natural Gas rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "OG&E SmartHours rebates", "PSO/AEP Oklahoma rebates", "Oklahoma Natural Gas rebates"],
     avgPayback: "7–10 years",
   },
   oregon: {
@@ -339,7 +339,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "Variable-speed heat pump — Oregon climate is near-perfect for heat pumps",
     climateNote: "Oregon's mild, rainy climate is ideal for heat pumps. Portland rarely drops below 25°F, so standard (non-cold-climate) heat pumps work efficiently year-round.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Energy Trust of Oregon Heat Pump Rebate up to $2,500", "PacifiCorp rebates", "Portland General Electric rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Energy Trust of Oregon Heat Pump Rebate up to $2,500", "PacifiCorp rebates", "Portland General Electric rebates"],
     avgPayback: "7–10 years",
   },
   pennsylvania: {
@@ -348,7 +348,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$750–$1,150/yr",
     recommendedSystem: "Cold-climate heat pump + gas backup, or high-efficiency furnace + AC",
     climateNote: "Pennsylvania winters vary—Philadelphia is mild enough for standard heat pumps, while Pittsburgh and north PA benefit from cold-climate models or gas backup.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "PPL Electric efficiency rebates", "PECO Smart Ideas rebates", "Columbia Gas of PA rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "PPL Electric efficiency rebates", "PECO Smart Ideas rebates", "Columbia Gas of PA rebates"],
     avgPayback: "7–10 years",
   },
   "rhode-island": {
@@ -357,7 +357,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$750–$1,150/yr",
     recommendedSystem: "Cold-climate heat pump + oil or gas backup",
     climateNote: "Rhode Island's high heating oil dependence makes cold-climate heat pumps especially attractive. Modern units cut oil consumption by 50–70% in average RI winters.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "RI Energy Efficiency rebates", "National Grid RI rebates", "Pascoag Utility District programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "RI Energy Efficiency rebates", "National Grid RI rebates", "Pascoag Utility District programs"],
     avgPayback: "7–10 years",
   },
   "south-carolina": {
@@ -366,7 +366,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Heat pump (17+ SEER2) — excellent fit for SC climate",
     climateNote: "South Carolina's hot, humid summers and mild winters are textbook heat pump territory. High-SEER2 models pay back quickly given the long cooling season.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Duke Energy Carolinas efficiency rebates", "Dominion Energy SC rebates", "Central Electric Coop rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Duke Energy Carolinas efficiency rebates", "Dominion Energy SC rebates", "Central Electric Coop rebates"],
     avgPayback: "6–9 years",
   },
   "south-dakota": {
@@ -375,7 +375,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + 16 SEER2 AC",
     climateNote: "South Dakota's brutally cold winters and hot summers demand versatile systems. A high-efficiency furnace handles winter; pair with efficient AC for hot summer months.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Black Hills Energy rebates", "Montana-Dakota Utilities rebates", "SD Housing Development Authority programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Black Hills Energy rebates", "Montana-Dakota Utilities rebates", "SD Housing Development Authority programs"],
     avgPayback: "9–13 years",
   },
   tennessee: {
@@ -384,7 +384,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Heat pump (17+ SEER2) — TVA region heat pump specialist programs available",
     climateNote: "Tennessee's mixed climate is ideal for heat pumps. TVA's EnergyRight program has promoted heat pumps for decades here, and installers are highly experienced.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "TVA EnergyRight Heat Pump rebates up to $400", "Nashville Electric Service rebates", "Memphis Light Gas and Water rebates"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "TVA EnergyRight Heat Pump rebates up to $400", "Nashville Electric Service rebates", "Memphis Light Gas and Water rebates"],
     avgPayback: "7–10 years",
   },
   texas: {
@@ -393,7 +393,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,200/yr",
     recommendedSystem: "High-efficiency central AC (18–20 SEER2) + heat pump for North TX",
     climateNote: "South Texas needs maximum cooling efficiency; North Texas needs both—a heat pump handles both roles. After Winter Storm Uri, whole-home backup generators are also trending.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Oncor/AEP Texas rebates", "CenterPoint Energy rebates up to $500", "Austin Energy rebates up to $800"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Oncor/AEP Texas rebates", "CenterPoint Energy rebates up to $500", "Austin Energy rebates up to $800"],
     avgPayback: "6–9 years",
   },
   utah: {
@@ -402,7 +402,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "Dual-fuel heat pump + high-efficiency gas furnace",
     climateNote: "Utah's high altitude means cold winters but plenty of sunshine. Dual-fuel heat pumps leverage mild shoulder-season temps while gas handles cold snaps.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Rocky Mountain Power wattsmart rebates", "Dominion Energy Utah rebates", "Utah Governor's Energy Development Office programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Rocky Mountain Power wattsmart rebates", "Dominion Energy Utah rebates", "Utah Governor's Energy Development Office programs"],
     avgPayback: "8–11 years",
   },
   vermont: {
@@ -411,7 +411,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$800–$1,200/yr",
     recommendedSystem: "Cold-climate heat pump (Mitsubishi Hyper-Heat) + propane/oil backup",
     climateNote: "Vermont is a national leader in cold-climate heat pump adoption. Efficiency Vermont incentives are top-tier, and cold-climate units now handle VT winters with ease.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Efficiency Vermont HP rebate up to $1,500", "Green Mountain Power weatherization", "VT Clean Heat Standard incentives"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Efficiency Vermont HP rebate up to $1,500", "Green Mountain Power weatherization", "VT Clean Heat Standard incentives"],
     avgPayback: "8–12 years",
   },
   virginia: {
@@ -420,7 +420,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "Air-source heat pump (17+ SEER2 / 9+ HSPF2)",
     climateNote: "Virginia's climate—hot summers, mild to cold winters—is textbook heat pump territory. Northern VA winters occasionally call for cold-climate models.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Dominion Energy VA efficiency rebates", "Appalachian Power rebates", "VA Department of Housing weatherization programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Dominion Energy VA efficiency rebates", "Appalachian Power rebates", "VA Department of Housing weatherization programs"],
     avgPayback: "6–9 years",
   },
   washington: {
@@ -429,7 +429,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$500–$900/yr",
     recommendedSystem: "Variable-speed heat pump — WA's mild climate is ideal",
     climateNote: "Washington's mild, rainy climate is nearly perfect for heat pumps. Low heating demand and moderate summers mean efficient heat pumps provide excellent year-round comfort.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Puget Sound Energy rebates up to $1,000", "Seattle City Light rebates", "Energy Match WA low-income programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Puget Sound Energy rebates up to $1,000", "Seattle City Light rebates", "Energy Match WA low-income programs"],
     avgPayback: "8–12 years",
   },
   "west-virginia": {
@@ -438,7 +438,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$650–$1,050/yr",
     recommendedSystem: "High-efficiency furnace + AC, or cold-climate heat pump with backup",
     climateNote: "West Virginia's mountainous terrain creates cold microclimates. Cold-climate heat pumps work well in valleys; higher elevations benefit from gas/propane backup.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Appalachian Power rebates", "Mountaineer Gas rebates", "WV Weatherization Assistance Program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Appalachian Power rebates", "Mountaineer Gas rebates", "WV Weatherization Assistance Program"],
     avgPayback: "7–10 years",
   },
   wisconsin: {
@@ -447,7 +447,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$700–$1,100/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + 16 SEER2 AC",
     climateNote: "Wisconsin's harsh winters make furnace efficiency the top priority. Madison averages 21 days below 0°F—cold-climate heat pumps are viable but gas backup is prudent.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Focus on Energy rebates up to $600", "We Energies/MG&E rebates", "Wisconsin Home Energy Plus program"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Focus on Energy rebates up to $600", "We Energies/MG&E rebates", "Wisconsin Home Energy Plus program"],
     avgPayback: "8–12 years",
   },
   wyoming: {
@@ -456,7 +456,7 @@ export const HVAC_STATES: Record<string, HVACStateData> = {
     avgAnnualSavings: "$600–$1,000/yr",
     recommendedSystem: "High-efficiency furnace (96+ AFUE) + central AC or dual-fuel system",
     climateNote: "Wyoming's high altitude and harsh winters demand serious heating. Cheyenne averages 25 days below 0°F; Casper is even colder. Gas furnaces remain essential.",
-    incentives: ["Federal 25C Tax Credit up to $2,000", "Rocky Mountain Power rebates", "Wyoming Weatherization Assistance Program", "USDA Rural Energy programs"],
+    incentives: ["Current HVAC rebate and tax eligibility should be verified", "Rocky Mountain Power rebates", "Wyoming Weatherization Assistance Program", "USDA Rural Energy programs"],
     avgPayback: "9–13 years",
   },
 }

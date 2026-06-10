@@ -4,18 +4,18 @@ import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Home Insulation Cost & Free Quotes (2025) | CleverHomeEnergy",
+  title: "Insulation Cost 2026: Attic, Wall, Air Sealing & Free Quotes",
   description:
-    "Cut heating and cooling costs 15–25% with proper insulation. Compare insulation types, costs, and get free quotes from local contractors. IRA 30% tax credit available.",
+    "Compare attic insulation, wall insulation, crawl space air sealing, current rebate checks, and free local insulation quote options.",
 }
 
 const topics = [
-  { title: "Home Insulation Cost in 2025", href: "/blog/home-insulation-cost", tag: "Pricing" },
+  { title: "Home Insulation Cost 2026", href: "/blog/home-insulation-cost", tag: "Pricing" },
   { title: "Blown-In Insulation Cost Guide", href: "/blog/blown-in-insulation-cost", tag: "Pricing" },
   { title: "Types of Home Insulation", href: "/blog/types-of-home-insulation", tag: "Guide" },
   { title: "Spray Foam vs Fiberglass", href: "/blog/spray-foam-vs-fiberglass-insulation", tag: "Comparison" },
   { title: "Attic Insulation Guide", href: "/blog/attic-insulation-guide", tag: "Guide" },
-  { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
+  { title: "Home Energy Tax Credits 2026", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
   { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
   { title: "Check Your State Rebates", href: "/tools/rebates", tag: "Rebates" },
 ]
@@ -60,11 +60,11 @@ export default function InsulationPage() {
             <span className="text-sm font-semibold text-amber-700">Home Insulation</span>
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Home Insulation: Cut Heating &<br />
-            <span className="text-amber-600">Cooling Bills by 15–25%</span>
+            Home Insulation Cost & Quotes:<br />
+            <span className="text-amber-600">Attic, Wall & Air Sealing</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl">
-            Most US homes are significantly under-insulated. Adding proper insulation is one of the highest-ROI upgrades available — with a 30% federal tax credit and payback in as little as 3 years.
+            Compare insulation scopes, R-value targets, air sealing, and current utility or state rebate requirements before choosing a contractor.
           </p>
           <ZipCodeForm category="insulation" />
         </div>
@@ -74,9 +74,9 @@ export default function InsulationPage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
           {[
             { v: "$1,200–$3,500", l: "Typical Attic Project" },
-            { v: "15–25%", l: "Energy Bill Reduction" },
+            { v: "15-25%", l: "Bill Impact Est." },
             { v: "3–7 yrs", l: "Average Payback" },
-            { v: "30% Tax Credit", l: "IRA Section 25C" },
+            { v: "Rebate Check", l: "Utility + State" },
           ].map((s) => (
             <div key={s.l}>
               <p className="text-2xl font-extrabold">{s.v}</p>
@@ -115,7 +115,7 @@ export default function InsulationPage() {
             </table>
           </div>
           <p className="text-xs text-gray-400 mt-3">
-            All insulation projects qualify for the IRA 30% tax credit (up to $1,200/year) when installed in your primary residence.
+            Current incentive eligibility varies by utility, state program, home condition, and whether pre-approval or an audit is required.
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function InsulationPage() {
       <section className="py-12 px-4 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Insulation Quotes by City</h2>
-          <p className="text-gray-500 text-sm mb-6">Find licensed insulation contractors and local pricing in your city.</p>
+          <p className="text-gray-500 text-sm mb-6">Find local insulation pricing and project guidance in your city.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {cities.map((c) => (
               <Link
@@ -203,7 +203,7 @@ export default function InsulationPage() {
           <CheckCircle className="w-10 h-10 text-amber-200 mx-auto mb-3" />
           <h2 className="text-2xl font-bold mb-2">Get Free Insulation Quotes Today</h2>
           <p className="text-amber-100 text-sm mb-6">
-            Compare quotes from licensed local insulation contractors. Takes 60 seconds.
+            Request local insulation quote options. Free to request, no obligation.
           </p>
           <ZipCodeForm category="insulation" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>

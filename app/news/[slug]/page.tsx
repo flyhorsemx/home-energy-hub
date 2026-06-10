@@ -6,6 +6,7 @@ import Link from "next/link"
 import { ArrowRight, Calendar, Tag } from "lucide-react"
 import ZipCodeForm from "@/components/lead-gen/ZipCodeForm"
 import ArticleJsonLd from "@/components/content/ArticleJsonLd"
+import InContentCTA from "@/components/lead-gen/InContentCTA"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -40,6 +41,33 @@ export default async function NewsPost({ params }: Props) {
     .filter((p) => p.slug !== slug)
     .slice(0, 3)
 
+  const category = post.meta.category?.toLowerCase().includes("hvac")
+    ? "hvac"
+    : post.meta.category?.toLowerCase().includes("roof")
+    ? "roofing"
+    : post.meta.category?.toLowerCase().includes("window")
+    ? "windows"
+    : post.meta.category?.toLowerCase().includes("insulation")
+    ? "insulation"
+    : "solar"
+
+  const components = {
+    InContentCTA: (props: React.ComponentProps<typeof InContentCTA>) => (
+      <InContentCTA category={category} {...props} />
+    ),
+    table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
+      <div className="not-prose my-6 overflow-x-auto rounded-xl border border-gray-200">
+        <table className="w-full min-w-[640px] text-sm" {...props} />
+      </div>
+    ),
+    th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
+      <th className="bg-gray-50 px-4 py-3 text-left font-semibold text-gray-800" {...props} />
+    ),
+    td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
+      <td className="border-t border-gray-100 px-4 py-3 align-top text-gray-700" {...props} />
+    ),
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ArticleJsonLd
@@ -70,7 +98,7 @@ export default async function NewsPost({ params }: Props) {
         </header>
 
         <div className="prose prose-gray prose-lg max-w-none prose-headings:font-bold prose-a:text-green-700">
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} components={components} />
         </div>
       </article>
 

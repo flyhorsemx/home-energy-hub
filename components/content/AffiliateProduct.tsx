@@ -1,4 +1,12 @@
+"use client"
+
 import { ExternalLink, Star } from "lucide-react"
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
 
 interface AffiliateProductProps {
   name: string
@@ -53,6 +61,11 @@ export default function AffiliateProduct({
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="inline-flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-xs px-3 py-1.5 rounded-lg transition-colors"
+          onClick={() => window.gtag?.("event", "affiliate_click", {
+            affiliate: source.toLowerCase(),
+            product_name: name,
+            page_path: window.location.pathname,
+          })}
         >
           View on {source} <ExternalLink className="w-3 h-3" />
         </a>

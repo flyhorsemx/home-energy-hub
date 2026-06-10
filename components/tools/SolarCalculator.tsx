@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Sun, DollarSign, TrendingDown, Zap, ArrowRight } from "lucide-react"
+import { trackGaEvent } from "@/components/analytics/GoogleAnalytics"
 
 const STATE_INCENTIVES: Record<string, number> = {
   CA: 1500, NY: 1000, MA: 1000, TX: 0, FL: 0, CO: 500,
@@ -12,18 +13,17 @@ const STATE_INCENTIVES: Record<string, number> = {
 function calcSolar(monthlyBill: number, systemSize: number, state: string) {
   const annualBill = monthlyBill * 12
   const solarProduction = systemSize * 1350 * 0.85 // kWh/yr (avg sun hours × efficiency)
-  const avgRatePerKwh = 0.143 // national avg 2025
+  const avgRatePerKwh = 0.16 // national planning estimate
   const annualSavings = Math.min(solarProduction * avgRatePerKwh, annualBill)
 
   const grossCost = systemSize * 2800 // $/kW installed
-  const federalCredit = grossCost * 0.30
-  const stateCredit = STATE_INCENTIVES[state] || 0
-  const netCost = grossCost - federalCredit - stateCredit
+  const localIncentive = STATE_INCENTIVES[state] || 0
+  const netCost = grossCost - localIncentive
 
   const paybackYears = netCost / annualSavings
   const savings20yr = annualSavings * 20 - netCost
 
-  return { grossCost, federalCredit, stateCredit, netCost, annualSavings, paybackYears, savings20yr, systemSize }
+  return { grossCost, localIncentive, netCost, annualSavings, paybackYears, savings20yr, systemSize }
 }
 
 const US_STATES = [
@@ -75,7 +75,7 @@ export default function SolarCalculator() {
           <div className="flex justify-between text-xs text-gray-400 mt-1">
             <span>4 kW</span><span>20 kW</span>
           </div>
-          <p className="text-xs text-gray-400 mt-1">Average home needs 6–10 kW. Rule of thumb: ~1 kW per $20/mo of electric bill.</p>
+          <p className="text-xs text-gray-400 mt-1">Average home needs 6-10 kW. Rule of thumb: ~1 kW per $20/mo of electric bill.</p>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
@@ -101,7 +101,14 @@ export default function SolarCalculator() {
         </div>
 
         <button
-          onClick={() => setShowResults(true)}
+          onClick={() => {
+            trackGaEvent("calculator_submit", {
+              calculator: "solar",
+              state,
+              has_zip: zip.length === 5,
+            })
+            setShowResults(true)
+          }}
           className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-xl transition-colors"
         >
           <Sun className="w-5 h-5" /> Calculate My Solar Savings
@@ -111,14 +118,14 @@ export default function SolarCalculator() {
       {/* Results */}
       {showResults && (
         <div className="border-t border-gray-100 bg-gradient-to-br from-green-50 to-white p-6 md:p-8">
-          <h2 className="text-xl font-extrabold text-gray-900 mb-6">Your Estimated Solar Savings</h2>
+          <h2 className="text-xl font-extrabold text-gray-900 mb-6">Your Estimated Solar Bill Impact</h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
-              { icon: DollarSign, label: "System Cost", value: fmt(results.grossCost), sub: "before credits", color: "text-gray-700" },
-              { icon: TrendingDown, label: "Federal Credit (30%)", value: fmt(results.federalCredit), sub: "tax credit", color: "text-green-700" },
-              { icon: Zap, label: "Net Cost", value: fmt(results.netCost), sub: "after all credits", color: "text-blue-700" },
-              { icon: Sun, label: "Annual Savings", value: fmt(results.annualSavings), sub: "per year", color: "text-yellow-700" },
+              { icon: DollarSign, label: "System Cost", value: fmt(results.grossCost), sub: "before incentives", color: "text-gray-700" },
+              { icon: TrendingDown, label: "Local Incentive Est.", value: fmt(results.localIncentive), sub: "verify eligibility", color: "text-green-700" },
+              { icon: Zap, label: "Estimated Net Cost", value: fmt(results.netCost), sub: "after listed incentives", color: "text-blue-700" },
+              { icon: Sun, label: "Annual Bill Impact", value: fmt(results.annualSavings), sub: "estimate", color: "text-yellow-700" },
             ].map(({ icon: Icon, label, value, sub, color }) => (
               <div key={label} className="bg-white rounded-xl border border-gray-100 p-4 text-center">
                 <Icon className={`w-5 h-5 mx-auto mb-1 ${color}`} />
@@ -140,7 +147,7 @@ export default function SolarCalculator() {
             </div>
             {STATE_INCENTIVES[state] > 0 && (
               <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-700">{state} State Incentive</span>
+                <span className="font-semibold text-gray-700">{state} Local Incentive Estimate</span>
                 <span className="text-xl font-extrabold text-blue-700">{fmt(STATE_INCENTIVES[state])}</span>
               </div>
             )}
@@ -148,7 +155,7 @@ export default function SolarCalculator() {
 
           <div className="bg-green-700 text-white rounded-xl p-5 text-center">
             <p className="font-bold text-lg mb-1">See Real Quotes for Your Home</p>
-            <p className="text-green-100 text-sm mb-4">Local installers can give you exact numbers for your roof. Compare up to 3 quotes free.</p>
+            <p className="text-green-100 text-sm mb-4">Local installers can give exact numbers for your roof, utility rules, and current incentive eligibility.</p>
             <button
               onClick={() => router.push(`/quotes/solar${zip ? `?zip=${zip}` : ""}`)}
               className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl mx-auto transition-colors"

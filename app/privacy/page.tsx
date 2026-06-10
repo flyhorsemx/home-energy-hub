@@ -21,12 +21,12 @@ export default function PrivacyPage() {
 
         <h2>2. How We Use Your Information</h2>
         <p>
-          We use your contact information to connect you with licensed local contractors who can provide free, no-obligation quotes for home energy upgrades. We do not sell your data to data brokers. Your information is shared only with service providers who have agreed to use it solely to contact you about your quote request.
+          We use your contact information to help you request quotes from local home improvement companies for home energy upgrades. We do not sell your data to data brokers. Your information is shared only with service providers who have agreed to use it solely to contact you about your quote request.
         </p>
 
         <h2>3. Lead Sharing</h2>
         <p>
-          By submitting a quote request, you consent to being contacted by up to three (3) licensed contractors in your area via phone, email, or SMS. You can opt out at any time by replying STOP to any SMS or contacting us at privacy@homeenergyhub.com.
+          By submitting a quote request, you authorize CleverHomeEnergy and its partners to contact you about your request via phone, email, or SMS, including through automated technology where permitted. Consent is not a condition of purchase. You can opt out at any time by replying STOP to any SMS or contacting us at privacy@homeenergyhub.com.
         </p>
 
         <h2>4. Cookies</h2>

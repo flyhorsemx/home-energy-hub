@@ -315,7 +315,7 @@ export default function RoofingMaterialsPage() {
         <div className="bg-red-50 border border-red-200 rounded-2xl p-6 text-center">
           <h2 className="text-lg font-bold text-gray-900 mb-2">Get Free Roofing Quotes</h2>
           <p className="text-gray-600 text-sm mb-5">
-            Compare bids from up to 3 licensed local contractors — most homeowners save $3,000–$8,000 by comparing.
+            Request local roofing quote options and compare materials, warranty, and project scope.
           </p>
           <div className="flex justify-center">
             <ZipCodeForm category="roofing" />

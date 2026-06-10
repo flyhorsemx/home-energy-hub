@@ -38,7 +38,7 @@ export default function CityPageJsonLd({
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${serviceLabel} in ${cityName}, ${stateAbbr}`,
-    description: `Free quotes from licensed ${serviceLabel.toLowerCase()} contractors in ${cityName}, ${stateAbbr}.`,
+    description: `Free quote request for ${serviceLabel.toLowerCase()} companies in ${cityName}, ${stateAbbr}.`,
     areaServed: {
       "@type": "City",
       name: cityName,

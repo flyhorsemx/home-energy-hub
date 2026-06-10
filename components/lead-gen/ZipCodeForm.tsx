@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { MapPin, ArrowRight, Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { trackPixelEvent } from "@/components/analytics/MetaPixel"
+import { trackGaEvent } from "@/components/analytics/GoogleAnalytics"
 
 const schema = z.object({
   zip: z
@@ -38,6 +39,7 @@ export default function ZipCodeForm({ compact = false, category, className }: Zi
   const onSubmit = (data: FormData) => {
     const target = data.category || category || "solar"
     trackPixelEvent("Lead", { content_category: target, content_name: "zip_submit" })
+    trackGaEvent("zip_start", { service_type: target, zip: data.zip })
     router.push(`/quotes/${target}?zip=${data.zip}`)
   }
 
@@ -94,7 +96,7 @@ export default function ZipCodeForm({ compact = false, category, className }: Zi
       {errors.zip && (
         <p className="text-red-500 text-sm mt-2 ml-1">{errors.zip.message}</p>
       )}
-      <p className="text-xs text-gray-500 mt-2 ml-1">100% free. No spam. Results in 60 seconds.</p>
+      <p className="text-xs text-gray-500 mt-2 ml-1">Free to request. No spam. Takes about 60 seconds.</p>
     </form>
   )
 }

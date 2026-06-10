@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { CheckCircle, ChevronRight, Loader2, Sun, Wind, Home, AppWindow, Layers, Droplets, Shield, Lock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { trackPixelEvent } from "@/components/analytics/MetaPixel"
+import { trackGaEvent } from "@/components/analytics/GoogleAnalytics"
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -30,12 +31,12 @@ const STEPS = [
 ]
 
 const SERVICE_OPTIONS = [
-  { value: "solar", label: "Solar Panels", sublabel: "Save $1,400+/yr", icon: Sun, color: "border-yellow-300 has-[:checked]:bg-yellow-50 has-[:checked]:border-yellow-500" },
-  { value: "hvac", label: "HVAC System", sublabel: "Save $400+/yr", icon: Wind, color: "border-blue-300 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-500" },
+  { value: "solar", label: "Solar Panels", sublabel: "Compare options", icon: Sun, color: "border-yellow-300 has-[:checked]:bg-yellow-50 has-[:checked]:border-yellow-500" },
+  { value: "hvac", label: "HVAC System", sublabel: "Compare quotes", icon: Wind, color: "border-blue-300 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-500" },
   { value: "roofing", label: "Roofing", sublabel: "Free estimates", icon: Home, color: "border-red-300 has-[:checked]:bg-red-50 has-[:checked]:border-red-500" },
-  { value: "windows", label: "Windows", sublabel: "Up to 25% savings", icon: AppWindow, color: "border-purple-300 has-[:checked]:bg-purple-50 has-[:checked]:border-purple-500" },
-  { value: "insulation", label: "Insulation", sublabel: "Save 15–25%", icon: Layers, color: "border-amber-300 has-[:checked]:bg-amber-50 has-[:checked]:border-amber-500" },
-  { value: "water-heating", label: "Water Heater", sublabel: "$2,000 tax credit", icon: Droplets, color: "border-cyan-300 has-[:checked]:bg-cyan-50 has-[:checked]:border-cyan-500" },
+  { value: "windows", label: "Windows", sublabel: "Compare styles", icon: AppWindow, color: "border-purple-300 has-[:checked]:bg-purple-50 has-[:checked]:border-purple-500" },
+  { value: "insulation", label: "Insulation", sublabel: "Compare scopes", icon: Layers, color: "border-amber-300 has-[:checked]:bg-amber-50 has-[:checked]:border-amber-500" },
+  { value: "water-heating", label: "Water Heater", sublabel: "Compare systems", icon: Droplets, color: "border-cyan-300 has-[:checked]:bg-cyan-50 has-[:checked]:border-cyan-500" },
 ]
 
 interface MultiStepQuoteFormProps {
@@ -70,6 +71,15 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
     4: ["name", "phone", "zip"],
   }
 
+  useEffect(() => {
+    if (step >= 1 && step <= 4) {
+      trackGaEvent(`quote_step_${step}`, {
+        service_type: watch("serviceType") || category || "unknown",
+        step,
+      })
+    }
+  }, [category, step, watch])
+
   const nextStep = async () => {
     const valid = await trigger(fieldsPerStep[step])
     if (valid) setStep((s) => s + 1)
@@ -98,6 +108,11 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
       }
 
       trackPixelEvent("CompleteRegistration", { content_name: data.serviceType, status: "lead_submitted" })
+      trackGaEvent("lead_submit", {
+        service_type: data.serviceType,
+        zip: data.zip,
+        home_ownership: data.homeOwnership,
+      })
       setSubmitted(true)
       setStep(5)
     } catch (err) {
@@ -114,10 +129,10 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">You&apos;re All Set!</h3>
         <p className="text-gray-600 max-w-sm mx-auto mb-6 text-sm leading-relaxed">
-          Local {watch("serviceType")} contractors will contact you within 24 hours with free, no-obligation quotes. Check your email for confirmation.
+          Local {watch("serviceType")} companies may contact you with quote options. Check your email for confirmation.
         </p>
         <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-sm text-green-800">
-          <strong>Next step:</strong> Keep an eye on your phone — contractors typically call within 2 hours during business hours.
+          <strong>Next step:</strong> Keep an eye on your phone and email during business hours.
         </div>
       </div>
     )
@@ -260,7 +275,7 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">Almost done! How can contractors reach you?</h3>
-              <p className="text-gray-500 text-sm mb-4">Up to 3 local pros will contact you with free quotes.</p>
+              <p className="text-gray-500 text-sm mb-4">Up to 3 local companies may contact you with quote options.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -282,7 +297,7 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
               By submitting, you agree to our{" "}
               <a href="/terms" className="underline hover:text-gray-700">Terms</a> and{" "}
               <a href="/privacy" className="underline hover:text-gray-700">Privacy Policy</a>.
-              TCPA compliant. Completely free, no obligation.
+              By clicking submit, you authorize CleverHomeEnergy and its partners to contact you about your request at the phone number and email provided, including by calls, texts, prerecorded messages, or automated technology. Consent is not a condition of purchase.
             </div>
           </div>
         )}
@@ -322,7 +337,7 @@ export default function MultiStepQuoteForm({ category, initialZip = "" }: MultiS
               {isSubmitting ? (
                 <><Loader2 className="w-5 h-5 animate-spin" /> Processing...</>
               ) : (
-                <>Get My Free Quotes <ChevronRight className="w-4 h-4" /></>
+                <>Request My Quotes <ChevronRight className="w-4 h-4" /></>
               )}
             </button>
           )}
