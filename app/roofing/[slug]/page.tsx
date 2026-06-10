@@ -8,6 +8,7 @@ import { getStateBySlug } from "@/lib/states"
 import type { Metadata } from "next"
 import { SITE_URL } from "@/lib/config"
 import CityPageJsonLd from "@/components/content/CityPageJsonLd"
+import AngiCTA from "@/components/content/AngiCTA"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -25,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityData = getCityBySlug(slug)
   if (cityData) {
     return {
-      title: `Roofing Contractors in ${cityData.name}, ${cityData.stateAbbr} (2025): Cost, Materials & Free Quotes`,
-      description: `Average roof replacement cost in ${cityData.name}: ${cityData.roofing.avgCost}. Compare local roofing contractors. ${cityData.roofing.topMaterial} recommended for ${cityData.name}'s climate.`,
+      title: `Roof Replacement Cost in ${cityData.name}, ${cityData.stateAbbr}: 2026 Materials & Free Quotes`,
+      description: `Compare 2026 roof replacement cost in ${cityData.name}: ${cityData.roofing.avgCost}. See local material options, rebate checks, and free contractor quotes.`,
       keywords: [`roofing contractors ${cityData.name}`, `roof replacement ${cityData.name} ${cityData.stateAbbr}`, `roofing cost ${cityData.name}`, `roof repair ${cityData.name}`],
       alternates: { canonical: `${SITE_URL}/roofing/${slug}` },
     }
@@ -35,8 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const base = getStateBySlug(slug)
   if (roofing && base) {
     return {
-      title: `Roof Replacement Cost in ${base.name} (2025): Prices by Material & Free Quotes`,
-      description: `Average roof replacement cost in ${base.name}: ${roofing.avgCost}. Compare roofing materials, get local contractor quotes, and learn about ${base.name} roofing rebates.`,
+      title: `Roof Replacement Cost in ${base.name}: 2026 Prices, Materials & Free Quotes`,
+      description: `Average 2026 roof replacement cost in ${base.name}: ${roofing.avgCost}. Compare materials, current rebate checks, and free local contractor quotes.`,
       keywords: [`roof replacement cost ${base.name}`, `roofing cost ${base.name}`, `roof replacement ${base.name}`, `roofing contractor ${base.name}`],
       alternates: { canonical: `${SITE_URL}/roofing/${slug}` },
     }
@@ -55,9 +56,9 @@ export default async function RoofingSlugPage({ params }: Props) {
       { q: `How much does a roof replacement cost in ${cityData.name}, ${cityData.stateAbbr}?`, a: `The average roof replacement in ${cityData.name} costs ${r.avgCost} for a standard home using ${r.topMaterial}. Price varies by roof size, pitch, material choice, and contractor.` },
       { q: `What is the best roofing material for ${cityData.name}?`, a: `${r.topMaterial} is the recommended roofing material for ${cityData.name}'s climate, offering a lifespan of ${r.avgLifespan}. ${r.climateNote.split(".")[0]}.` },
       { q: `How long does a roof last in ${cityData.name}, ${cityData.stateAbbr}?`, a: `With ${r.topMaterial}, you can expect a lifespan of ${r.avgLifespan} in ${cityData.name}'s climate. ${r.commonIssues[0]} can shorten roof life if not addressed.` },
-      { q: `Are there roofing rebates or incentives in ${cityData.name}?`, a: `Roofing rebates are limited, but some options in ${cityData.name} include: ${r.incentives.slice(0, 2).join("; ")}.` },
+      { q: `Are there roofing rebates or incentives in ${cityData.name}?`, a: `Roofing rebates are limited, but some options in ${cityData.name} include: ${r.incentives.slice(0, 2).join("; ")}. Ask each contractor to confirm current eligibility before you sign.` },
       { q: `How do I know if I need a roof repair or full replacement in ${cityData.name}?`, a: `If your roof is under 15 years old with isolated damage affecting less than 30% of the surface, repair is usually better. If it's over 20 years old or has widespread damage — replace it.` },
-      { q: `How do I find a licensed roofer in ${cityData.name}?`, a: `Verify ${cityData.stateAbbr} contractor license and both general liability and workers' compensation insurance. Get 3 written bids comparing the same material specs, and ask about manufacturer warranty enrollment.` },
+      { q: `How do I compare roofing contractors in ${cityData.name}?`, a: `Ask each roofing company about state requirements, insurance, warranty enrollment, materials, tear-off scope, ventilation, flashing, cleanup, and project timeline. Get 3 written bids comparing the same material specs before you decide.` },
     ]
     return (
       <>
@@ -78,6 +79,9 @@ export default async function RoofingSlugPage({ params }: Props) {
               Average roof replacement in {cityData.name}: <strong>{r.avgCost}</strong>. Best material for this climate: <strong>{r.topMaterial}</strong>. Expected lifespan: <strong>{r.avgLifespan}</strong>.
             </p>
             <ZipCodeForm category="roofing" />
+            <div className="mt-4 max-w-xl">
+              <AngiCTA category="roofing" locationName={cityData.name} />
+            </div>
           </div>
         </section>
         <section className="bg-slate-700 py-8 px-4">
@@ -115,6 +119,9 @@ export default async function RoofingSlugPage({ params }: Props) {
                 </div>
               ))}
             </div>
+            <p className="text-gray-500 text-sm mt-4">
+              Programs change often. Compare written roofing quotes and ask contractors to show rebate or insurance-discount assumptions before you sign.
+            </p>
           </div>
         </section>
         <section className="py-12 px-4 bg-white">
@@ -171,7 +178,7 @@ export default async function RoofingSlugPage({ params }: Props) {
           <div className="max-w-xl mx-auto">
             <Home className="w-10 h-10 text-slate-300 mx-auto mb-3" />
             <h2 className="text-2xl font-bold mb-2">Get Free Roofing Quotes in {cityData.name}</h2>
-            <p className="text-slate-300 text-sm mb-6">Compare quotes from vetted local {cityData.name} roofing contractors. 100% free, no obligation.</p>
+            <p className="text-slate-300 text-sm mb-6">Request quote options from local {cityData.name} roofing companies. 100% free to request.</p>
             <ZipCodeForm category="roofing" className="[&_input]:bg-white [&_input]:text-gray-900" />
           </div>
         </section>
@@ -202,6 +209,9 @@ export default async function RoofingSlugPage({ params }: Props) {
             Average roof replacement cost in {base.name}: <strong>{roofing.avgCost}</strong>. Most {base.name} roofs last <strong>{roofing.avgLifespan}</strong> with proper installation and maintenance.
           </p>
           <ZipCodeForm category="roofing" />
+          <div className="mt-4 max-w-xl">
+            <AngiCTA category="roofing" locationName={base.name} />
+          </div>
         </div>
       </section>
 
@@ -268,6 +278,9 @@ export default async function RoofingSlugPage({ params }: Props) {
               </div>
             ))}
           </div>
+          <p className="text-gray-500 text-sm mt-4">
+            Current programs vary by utility, insurer, material rating, and local rules. Ask each roofer to document rebate or insurance-discount assumptions in the quote.
+          </p>
         </div>
       </section>
 
@@ -293,7 +306,7 @@ export default async function RoofingSlugPage({ params }: Props) {
               { title: "Roof Replacement Cost Guide", href: "/blog/roof-replacement-cost" },
               { title: "Metal vs Asphalt Shingles", href: "/blog/metal-roof-vs-asphalt-shingles" },
               { title: "Signs You Need a New Roof", href: "/blog/signs-you-need-new-roof" },
-              { title: "Best Roofing Brands 2025", href: "/blog/best-roofing-brands" },
+              { title: "Best Roofing Brands", href: "/blog/best-roofing-brands" },
               { title: "Roof Repair vs Replacement", href: "/blog/roof-repair-vs-replacement" },
               { title: "How to Choose a Roofer", href: "/blog/how-to-choose-roofing-contractor" },
             ].map((link) => (
@@ -310,7 +323,7 @@ export default async function RoofingSlugPage({ params }: Props) {
         <div className="max-w-xl mx-auto">
           <Home className="w-10 h-10 text-slate-300 mx-auto mb-3" />
           <h2 className="text-2xl font-bold mb-2">Get Free Roofing Quotes in {base.name}</h2>
-          <p className="text-slate-300 text-sm mb-6">Compare quotes from licensed {base.name} roofing contractors. 100% free, no obligation.</p>
+          <p className="text-slate-300 text-sm mb-6">Request quote options from local {base.name} roofing companies. 100% free to request.</p>
           <ZipCodeForm category="roofing" className="[&_input]:bg-white [&_input]:text-gray-900" />
         </div>
       </section>

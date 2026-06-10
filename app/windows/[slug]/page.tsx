@@ -9,6 +9,7 @@ import { getStateBySlug } from "@/lib/states"
 import type { Metadata } from "next"
 import { SITE_URL } from "@/lib/config"
 import CityPageJsonLd from "@/components/content/CityPageJsonLd"
+import AngiCTA from "@/components/content/AngiCTA"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -122,6 +123,9 @@ export default async function WindowsSlugPage({ params }: Props) {
               Typical annual bill impact estimate: <strong>{w.avgSavings}</strong>.
             </p>
             <ZipCodeForm category="windows" />
+            <div className="mt-4 max-w-xl">
+              <AngiCTA category="windows" locationName={cityData.name} />
+            </div>
           </div>
         </section>
 
@@ -311,6 +315,9 @@ export default async function WindowsSlugPage({ params }: Props) {
             Average window replacement in {base.name}: <strong>{winState.avgCost}</strong>. Recommended type: <strong>{winState.recommendedType}</strong>. Annual savings estimate: <strong>{winState.avgAnnualSavings}</strong>.
           </p>
           <ZipCodeForm category="windows" />
+          <div className="mt-4 max-w-xl">
+            <AngiCTA category="windows" locationName={base.name} />
+          </div>
         </div>
       </section>
 

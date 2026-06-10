@@ -9,6 +9,7 @@ import { getStateBySlug } from "@/lib/states"
 import type { Metadata } from "next"
 import { SITE_URL } from "@/lib/config"
 import CityPageJsonLd from "@/components/content/CityPageJsonLd"
+import AngiCTA from "@/components/content/AngiCTA"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -144,6 +145,9 @@ export default async function InsulationSlugPage({ params }: Props) {
               Annual energy savings: <strong>{ins.avgAnnualSavings}</strong>.
             </p>
             <ZipCodeForm category="insulation" />
+            <div className="mt-4 max-w-xl">
+              <AngiCTA category="remodeling" locationName={cityData.name} />
+            </div>
           </div>
         </section>
 
@@ -420,6 +424,9 @@ export default async function InsulationSlugPage({ params }: Props) {
             Average attic insulation cost in {base.name}: <strong>{insState.avgAtticCost}</strong>. Recommended R-value: <strong>{insState.recommendedRValue}</strong>. Annual savings potential: <strong>{insState.avgAnnualSavings}</strong>.
           </p>
           <ZipCodeForm category="insulation" />
+          <div className="mt-4 max-w-xl">
+            <AngiCTA category="remodeling" locationName={base.name} />
+          </div>
         </div>
       </section>
 
