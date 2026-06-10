@@ -70,6 +70,7 @@ export default async function BlogPost({ params }: Props) {
         date={post.meta.date}
         slug={slug}
         author={post.meta.author}
+        faq={post.meta.faq}
       />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Article */}

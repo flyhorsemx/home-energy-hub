@@ -1,4 +1,5 @@
 import { SITE_URL, SITE_NAME } from "@/lib/config"
+import type { FaqItem } from "@/lib/mdx"
 
 interface ArticleJsonLdProps {
   type: "blog" | "news"
@@ -7,11 +8,11 @@ interface ArticleJsonLdProps {
   date: string
   slug: string
   author?: string
+  faq?: FaqItem[]
 }
 
-
-export default function ArticleJsonLd({ type, title, description, date, slug, author }: ArticleJsonLdProps) {
-  const schema = {
+export default function ArticleJsonLd({ type, title, description, date, slug, author, faq }: ArticleJsonLdProps) {
+  const articleSchema = {
     "@context": "https://schema.org",
     "@type": type === "news" ? "NewsArticle" : "Article",
     headline: title,
@@ -40,10 +41,31 @@ export default function ArticleJsonLd({ type, title, description, date, slug, au
     },
   }
 
+  const faqSchema =
+    faq && faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map(({ q, a }) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        }
+      : null
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+    </>
   )
 }

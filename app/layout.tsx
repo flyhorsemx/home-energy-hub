@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   verification: {
     google: "WI62FBST5dBGodyLcvWW8g5CgaGG7nlb1G8YZ0O4nOw",
   },
+  other: {
+    "impact-site-verification": "4e89a7ac-922c-44db-959b-e207c8b5a097",
+  },
   robots: {
     index: true,
     follow: true,

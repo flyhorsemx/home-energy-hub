@@ -14,7 +14,13 @@ export default function Footer() {
           <p className="text-sm leading-relaxed">
             Helping American homeowners cut energy bills with smarter upgrades. Free quotes, unbiased guides.
           </p>
-          <p className="text-xs mt-4 text-gray-600">
+          <a
+            href="mailto:hello@cleverhomeenergy.com"
+            className="text-sm mt-3 block hover:text-white transition-colors"
+          >
+            hello@cleverhomeenergy.com
+          </a>
+          <p className="text-xs mt-3 text-gray-600">
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
         </div>

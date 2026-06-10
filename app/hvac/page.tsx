@@ -11,11 +11,36 @@ export const metadata: Metadata = {
 
 const topics = [
   { title: "HVAC Installation Cost in 2025", href: "/blog/hvac-installation-cost", tag: "Pricing" },
+  { title: "Heat Pump Cost Guide 2025", href: "/blog/heat-pump-cost-guide", tag: "Pricing" },
+  { title: "Best Smart Thermostats 2025", href: "/blog/best-smart-thermostats-2025", tag: "Guide" },
+  { title: "Heat Pump vs Gas Furnace", href: "/blog/heat-pump-vs-gas-furnace", tag: "Comparison" },
+  { title: "Mini-Split vs Central Air", href: "/blog/mini-split-vs-central-air", tag: "Comparison" },
   { title: "Best HVAC Brands Ranked", href: "/blog/best-hvac-brands", tag: "Comparison" },
-  { title: "AC Maintenance vs. Replacement", href: "/blog/hvac-maintenance-checklist", tag: "Guide" },
+  { title: "Signs You Need a New HVAC", href: "/blog/signs-you-need-new-hvac", tag: "Diagnosis" },
   { title: "Trane vs Carrier: Which Is Better?", href: "/blog/trane-vs-carrier-hvac", tag: "Comparison" },
-  { title: "How Long Does an HVAC System Last?", href: "/blog/how-long-does-hvac-last", tag: "Guide" },
-  { title: "HVAC Rebates by State (2025)", href: "/news/hvac-rebates-by-state", tag: "Savings" },
+]
+
+const cities = [
+  { name: "Houston, TX", slug: "houston-tx" },
+  { name: "Phoenix, AZ", slug: "phoenix-az" },
+  { name: "Los Angeles, CA", slug: "los-angeles-ca" },
+  { name: "Chicago, IL", slug: "chicago-il" },
+  { name: "Dallas, TX", slug: "dallas-tx" },
+  { name: "Miami, FL", slug: "miami-fl" },
+  { name: "Atlanta, GA", slug: "atlanta-ga" },
+  { name: "Seattle, WA", slug: "seattle-wa" },
+  { name: "Denver, CO", slug: "denver-co" },
+  { name: "Boston, MA", slug: "boston-ma" },
+  { name: "Minneapolis, MN", slug: "minneapolis-mn" },
+  { name: "Charlotte, NC", slug: "charlotte-nc" },
+  { name: "Nashville, TN", slug: "nashville-tn" },
+  { name: "Philadelphia, PA", slug: "philadelphia-pa" },
+  { name: "San Antonio, TX", slug: "san-antonio-tx" },
+  { name: "Austin, TX", slug: "austin-tx" },
+  { name: "Las Vegas, NV", slug: "las-vegas-nv" },
+  { name: "Portland, OR", slug: "portland-or" },
+  { name: "Indianapolis, IN", slug: "indianapolis-in" },
+  { name: "Columbus, OH", slug: "columbus-oh" },
 ]
 
 const brands = [
@@ -107,6 +132,24 @@ export default function HvacPage() {
                   <p className="font-semibold text-gray-900 text-sm mt-2 group-hover:text-blue-700 transition-colors">{t.title}</p>
                 </div>
                 <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all shrink-0 ml-3" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">HVAC Quotes by City</h2>
+          <p className="text-gray-500 text-sm mb-6">Local HVAC pricing, contractor ratings, and free quotes in your city.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/hvac/${c.slug}`}
+                className="text-sm text-blue-700 hover:text-blue-900 hover:underline py-1 px-2 rounded hover:bg-blue-50 transition-colors"
+              >
+                {c.name}
               </Link>
             ))}
           </div>

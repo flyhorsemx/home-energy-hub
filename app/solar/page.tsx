@@ -11,12 +11,37 @@ export const metadata: Metadata = {
 }
 
 const solarTopics = [
-  { title: "Is Solar Worth It in 2025?", href: "/blog/how-solar-panels-work", tag: "Guide" },
   { title: "Solar Installation Cost by State", href: "/blog/solar-installation-cost-by-state", tag: "Pricing" },
-  { title: "Best Solar Panel Brands Ranked", href: "/blog/best-solar-panel-brands", tag: "Comparison" },
+  { title: "How Much Do Solar Panels Save?", href: "/blog/how-much-do-solar-panels-save", tag: "Savings" },
+  { title: "Solar Battery Storage Cost 2025", href: "/blog/solar-battery-storage-cost", tag: "Pricing" },
   { title: "Solar Rebates & Incentives Guide", href: "/blog/solar-rebates-incentives", tag: "Savings" },
+  { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
+  { title: "Solar Financing Options", href: "/blog/solar-financing-options", tag: "Guide" },
+  { title: "Best Solar Panel Brands Ranked", href: "/blog/best-solar-panel-brands", tag: "Comparison" },
   { title: "SunPower vs Panasonic Solar", href: "/blog/sunpower-vs-panasonic-solar", tag: "Comparison" },
-  { title: "Solar Panel Quotes: California", href: "/solar/california", tag: "Local" },
+]
+
+const topStates = [
+  { name: "California", slug: "california" },
+  { name: "Texas", slug: "texas" },
+  { name: "Florida", slug: "florida" },
+  { name: "Arizona", slug: "arizona" },
+  { name: "New York", slug: "new-york" },
+  { name: "North Carolina", slug: "north-carolina" },
+  { name: "New Jersey", slug: "new-jersey" },
+  { name: "Georgia", slug: "georgia" },
+  { name: "Virginia", slug: "virginia" },
+  { name: "Colorado", slug: "colorado" },
+  { name: "Washington", slug: "washington" },
+  { name: "Massachusetts", slug: "massachusetts" },
+  { name: "Nevada", slug: "nevada" },
+  { name: "Illinois", slug: "illinois" },
+  { name: "Maryland", slug: "maryland" },
+  { name: "Oregon", slug: "oregon" },
+  { name: "Minnesota", slug: "minnesota" },
+  { name: "Ohio", slug: "ohio" },
+  { name: "Michigan", slug: "michigan" },
+  { name: "Pennsylvania", slug: "pennsylvania" },
 ]
 
 const stats = [
@@ -164,6 +189,24 @@ export default function SolarPage() {
       </section>
 
       {/* Bottom CTA */}
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Solar Quotes by State</h2>
+          <p className="text-gray-500 text-sm mb-6">Local solar costs, incentives, and free quotes for your state.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {topStates.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/solar/${s.slug}`}
+                className="text-sm text-yellow-700 hover:text-yellow-900 hover:underline py-1 px-2 rounded hover:bg-yellow-50 transition-colors"
+              >
+                {s.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 px-4 bg-yellow-600 text-white text-center">
         <div className="max-w-xl mx-auto">
           <Star className="w-10 h-10 text-yellow-200 mx-auto mb-3" />

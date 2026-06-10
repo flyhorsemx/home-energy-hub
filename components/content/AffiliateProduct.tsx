@@ -8,6 +8,7 @@ interface AffiliateProductProps {
   reviewCount?: number
   href: string
   badge?: string
+  source?: string
 }
 
 export default function AffiliateProduct({
@@ -18,6 +19,7 @@ export default function AffiliateProduct({
   reviewCount,
   href,
   badge,
+  source = "Amazon",
 }: AffiliateProductProps) {
   return (
     <div className="not-prose my-4 border border-gray-200 rounded-xl p-4 bg-white flex items-start gap-4 hover:shadow-md transition-shadow">
@@ -52,7 +54,7 @@ export default function AffiliateProduct({
           rel="noopener noreferrer sponsored"
           className="inline-flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-xs px-3 py-1.5 rounded-lg transition-colors"
         >
-          View on Amazon <ExternalLink className="w-3 h-3" />
+          View on {source} <ExternalLink className="w-3 h-3" />
         </a>
         <p className="text-gray-400 text-xs mt-1">*Affiliate link — we earn a small commission at no extra cost to you.</p>
       </div>

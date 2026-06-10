@@ -11,11 +11,36 @@ export const metadata: Metadata = {
 
 const topics = [
   { title: "Home Insulation Cost in 2025", href: "/blog/home-insulation-cost", tag: "Pricing" },
+  { title: "Blown-In Insulation Cost Guide", href: "/blog/blown-in-insulation-cost", tag: "Pricing" },
+  { title: "Types of Home Insulation", href: "/blog/types-of-home-insulation", tag: "Guide" },
+  { title: "Spray Foam vs Fiberglass", href: "/blog/spray-foam-vs-fiberglass-insulation", tag: "Comparison" },
+  { title: "Attic Insulation Guide", href: "/blog/attic-insulation-guide", tag: "Guide" },
   { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
   { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
-  { title: "How to Lower Your Electric Bill", href: "/blog/how-to-lower-electric-bill", tag: "Guide" },
-  { title: "Home Upgrade Planner Tool", href: "/tools/upgrade-planner", tag: "Tool" },
   { title: "Check Your State Rebates", href: "/tools/rebates", tag: "Rebates" },
+]
+
+const cities = [
+  { name: "Houston, TX", slug: "houston-tx" },
+  { name: "Phoenix, AZ", slug: "phoenix-az" },
+  { name: "Los Angeles, CA", slug: "los-angeles-ca" },
+  { name: "Chicago, IL", slug: "chicago-il" },
+  { name: "Dallas, TX", slug: "dallas-tx" },
+  { name: "Miami, FL", slug: "miami-fl" },
+  { name: "Atlanta, GA", slug: "atlanta-ga" },
+  { name: "Seattle, WA", slug: "seattle-wa" },
+  { name: "Denver, CO", slug: "denver-co" },
+  { name: "Boston, MA", slug: "boston-ma" },
+  { name: "Minneapolis, MN", slug: "minneapolis-mn" },
+  { name: "Charlotte, NC", slug: "charlotte-nc" },
+  { name: "Nashville, TN", slug: "nashville-tn" },
+  { name: "Philadelphia, PA", slug: "philadelphia-pa" },
+  { name: "San Antonio, TX", slug: "san-antonio-tx" },
+  { name: "Austin, TX", slug: "austin-tx" },
+  { name: "Las Vegas, NV", slug: "las-vegas-nv" },
+  { name: "Portland, OR", slug: "portland-or" },
+  { name: "Indianapolis, IN", slug: "indianapolis-in" },
+  { name: "Columbus, OH", slug: "columbus-oh" },
 ]
 
 const insulationTypes = [
@@ -149,6 +174,24 @@ export default function InsulationPage() {
                   <p className="font-semibold text-gray-900 text-sm mt-2 group-hover:text-amber-700 transition-colors">{t.title}</p>
                 </div>
                 <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-amber-600 group-hover:translate-x-1 transition-all shrink-0 ml-3" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Insulation Quotes by City</h2>
+          <p className="text-gray-500 text-sm mb-6">Find licensed insulation contractors and local pricing in your city.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/insulation/${c.slug}`}
+                className="text-sm text-amber-700 hover:text-amber-900 hover:underline py-1 px-2 rounded hover:bg-amber-50 transition-colors"
+              >
+                {c.name}
               </Link>
             ))}
           </div>

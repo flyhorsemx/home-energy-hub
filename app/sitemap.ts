@@ -3,6 +3,10 @@ import type { MetadataRoute } from "next"
 import { SITE_URL } from "@/lib/config"
 import { STATE_SLUGS } from "@/lib/states"
 import { CITY_SLUGS } from "@/lib/cities"
+import { HVAC_STATE_SLUGS } from "@/lib/states-hvac"
+import { ROOFING_STATE_SLUGS } from "@/lib/states-roofing"
+import { INSULATION_STATE_SLUGS } from "@/lib/states-insulation"
+import { WINDOWS_STATE_SLUGS } from "@/lib/states-windows"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllPosts("blog")
@@ -110,5 +114,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }))
 
-  return [...staticRoutes, ...blogRoutes, ...newsRoutes, ...solarStateRoutes, ...roofingCityRoutes, ...hvacCityRoutes, ...windowsCityRoutes, ...insulationCityRoutes]
+  // HVAC state pages
+  const hvacStateRoutes: MetadataRoute.Sitemap = HVAC_STATE_SLUGS.map((state) => ({
+    url: `${SITE_URL}/hvac/${state}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  // Roofing state pages
+  const roofingStateRoutes: MetadataRoute.Sitemap = ROOFING_STATE_SLUGS.map((state) => ({
+    url: `${SITE_URL}/roofing/${state}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  // Insulation state pages
+  const insulationStateRoutes: MetadataRoute.Sitemap = INSULATION_STATE_SLUGS.map((state) => ({
+    url: `${SITE_URL}/insulation/${state}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  // Windows state pages
+  const windowsStateRoutes: MetadataRoute.Sitemap = WINDOWS_STATE_SLUGS.map((state) => ({
+    url: `${SITE_URL}/windows/${state}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
+  return [...staticRoutes, ...blogRoutes, ...newsRoutes, ...solarStateRoutes, ...roofingCityRoutes, ...hvacCityRoutes, ...windowsCityRoutes, ...insulationCityRoutes, ...hvacStateRoutes, ...roofingStateRoutes, ...insulationStateRoutes, ...windowsStateRoutes]
 }

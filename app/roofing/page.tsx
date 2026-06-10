@@ -11,11 +11,36 @@ export const metadata: Metadata = {
 
 const topics = [
   { title: "Roof Replacement Cost by State (2025)", href: "/blog/roof-replacement-cost", tag: "Pricing" },
-  { title: "Best Roofing Materials: Comparison Guide", href: "/blog/roofing-material-comparison", tag: "Guide" },
+  { title: "Metal Roof vs Asphalt Shingles", href: "/blog/metal-roof-vs-asphalt-shingles", tag: "Comparison" },
+  { title: "Owens Corning vs GAF Roofing", href: "/blog/owens-corning-vs-gaf-roofing", tag: "Comparison" },
+  { title: "Best Roofing Materials Guide", href: "/blog/roofing-material-comparison", tag: "Guide" },
   { title: "9 Signs You Need a New Roof", href: "/blog/signs-you-need-new-roof", tag: "Diagnosis" },
-  { title: "Best Roofing Brands Ranked", href: "/blog/best-roofing-brands", tag: "Comparison" },
+  { title: "Roof Repair vs Replacement", href: "/blog/roof-repair-vs-replacement", tag: "Guide" },
   { title: "How Long Does a Roof Last?", href: "/blog/how-long-does-roof-last", tag: "Guide" },
-  { title: "Free Roofing Estimates Near Me", href: "/quotes/roofing", tag: "Get Quote" },
+  { title: "How to Choose a Roofing Contractor", href: "/blog/how-to-choose-roofing-contractor", tag: "Guide" },
+]
+
+const cities = [
+  { name: "Houston, TX", slug: "houston-tx" },
+  { name: "Phoenix, AZ", slug: "phoenix-az" },
+  { name: "Los Angeles, CA", slug: "los-angeles-ca" },
+  { name: "Chicago, IL", slug: "chicago-il" },
+  { name: "Dallas, TX", slug: "dallas-tx" },
+  { name: "Miami, FL", slug: "miami-fl" },
+  { name: "Atlanta, GA", slug: "atlanta-ga" },
+  { name: "Seattle, WA", slug: "seattle-wa" },
+  { name: "Denver, CO", slug: "denver-co" },
+  { name: "Boston, MA", slug: "boston-ma" },
+  { name: "Minneapolis, MN", slug: "minneapolis-mn" },
+  { name: "Charlotte, NC", slug: "charlotte-nc" },
+  { name: "Nashville, TN", slug: "nashville-tn" },
+  { name: "Philadelphia, PA", slug: "philadelphia-pa" },
+  { name: "San Antonio, TX", slug: "san-antonio-tx" },
+  { name: "Austin, TX", slug: "austin-tx" },
+  { name: "Las Vegas, NV", slug: "las-vegas-nv" },
+  { name: "Portland, OR", slug: "portland-or" },
+  { name: "Indianapolis, IN", slug: "indianapolis-in" },
+  { name: "Columbus, OH", slug: "columbus-oh" },
 ]
 
 const materials = [
@@ -130,6 +155,24 @@ export default function RoofingPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Roofing Quotes by City</h2>
+          <p className="text-gray-500 text-sm mb-6">Local roofing costs, contractor ratings, and free estimates in your city.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/roofing/${c.slug}`}
+                className="text-sm text-red-700 hover:text-red-900 hover:underline py-1 px-2 rounded hover:bg-red-50 transition-colors"
+              >
+                {c.name}
+              </Link>
             ))}
           </div>
         </div>

@@ -10,12 +10,37 @@ export const metadata: Metadata = {
 }
 
 const topics = [
-  { title: "Energy-Efficient Windows Cost in 2025", href: "/news/energy-efficient-windows-cost-2025", tag: "Pricing" },
+  { title: "Window Replacement Cost in 2025", href: "/blog/window-replacement-cost", tag: "Pricing" },
   { title: "Best Energy-Efficient Window Brands", href: "/blog/best-energy-efficient-windows", tag: "Comparison" },
+  { title: "Andersen vs Pella Windows", href: "/blog/andersen-vs-pella-windows", tag: "Comparison" },
   { title: "Double vs Triple Pane Windows", href: "/blog/double-vs-triple-pane-windows", tag: "Guide" },
-  { title: "Window Replacement: DIY vs Pro", href: "/blog/window-replacement-guide", tag: "Guide" },
+  { title: "Window Replacement Guide", href: "/blog/window-replacement-guide", tag: "Guide" },
   { title: "ENERGY STAR Window Tax Credits", href: "/blog/energy-star-window-tax-credit", tag: "Savings" },
-  { title: "Get Free Window Estimates", href: "/quotes/windows", tag: "Get Quote" },
+  { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
+  { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
+]
+
+const cities = [
+  { name: "Houston, TX", slug: "houston-tx" },
+  { name: "Phoenix, AZ", slug: "phoenix-az" },
+  { name: "Los Angeles, CA", slug: "los-angeles-ca" },
+  { name: "Chicago, IL", slug: "chicago-il" },
+  { name: "Dallas, TX", slug: "dallas-tx" },
+  { name: "Miami, FL", slug: "miami-fl" },
+  { name: "Atlanta, GA", slug: "atlanta-ga" },
+  { name: "Seattle, WA", slug: "seattle-wa" },
+  { name: "Denver, CO", slug: "denver-co" },
+  { name: "Boston, MA", slug: "boston-ma" },
+  { name: "Minneapolis, MN", slug: "minneapolis-mn" },
+  { name: "Charlotte, NC", slug: "charlotte-nc" },
+  { name: "Nashville, TN", slug: "nashville-tn" },
+  { name: "Philadelphia, PA", slug: "philadelphia-pa" },
+  { name: "San Antonio, TX", slug: "san-antonio-tx" },
+  { name: "Austin, TX", slug: "austin-tx" },
+  { name: "Las Vegas, NV", slug: "las-vegas-nv" },
+  { name: "Portland, OR", slug: "portland-or" },
+  { name: "Indianapolis, IN", slug: "indianapolis-in" },
+  { name: "Columbus, OH", slug: "columbus-oh" },
 ]
 
 const windowTypes = [
@@ -100,6 +125,24 @@ export default function WindowsPage() {
                   <p className="font-semibold text-gray-900 text-sm mt-2 group-hover:text-purple-700 transition-colors">{t.title}</p>
                 </div>
                 <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all shrink-0 ml-3" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Window Quotes by City</h2>
+          <p className="text-gray-500 text-sm mb-6">Local window replacement costs and free quotes in your city.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/windows/${c.slug}`}
+                className="text-sm text-purple-700 hover:text-purple-900 hover:underline py-1 px-2 rounded hover:bg-purple-50 transition-colors"
+              >
+                {c.name}
               </Link>
             ))}
           </div>

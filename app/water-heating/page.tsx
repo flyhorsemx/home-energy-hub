@@ -10,10 +10,12 @@ export const metadata: Metadata = {
 }
 
 const topics = [
+  { title: "Water Heater Replacement Cost 2025", href: "/blog/water-heater-replacement-cost", tag: "Pricing" },
+  { title: "Tankless vs Tank Water Heater", href: "/blog/tankless-vs-tank-water-heater", tag: "Comparison" },
+  { title: "Heat Pump Water Heater Guide", href: "/blog/heat-pump-water-heater-guide", tag: "Guide" },
   { title: "IRA Home Energy Tax Credits", href: "/blog/ira-home-energy-tax-credits", tag: "Savings" },
-  { title: "Heat Pump vs Gas Furnace", href: "/blog/heat-pump-vs-gas-furnace", tag: "Guide" },
-  { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
   { title: "How to Lower Your Electric Bill", href: "/blog/how-to-lower-electric-bill", tag: "Guide" },
+  { title: "Home Energy Audit Guide", href: "/blog/home-energy-audit-guide", tag: "Guide" },
   { title: "Home Upgrade Planner Tool", href: "/tools/upgrade-planner", tag: "Tool" },
   { title: "Check Your State Rebates", href: "/tools/rebates", tag: "Rebates" },
 ]
