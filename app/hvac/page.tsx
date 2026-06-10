@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 const topics = [
   { title: "HVAC Installation Cost 2026", href: "/blog/hvac-installation-cost", tag: "Pricing" },
-  { title: "Heat Pump Cost Guide", href: "/blog/heat-pump-cost-guide", tag: "Pricing" },
-  { title: "Best Smart Thermostats", href: "/blog/best-smart-thermostats-2025", tag: "Guide" },
+  { title: "Heat Pump Installation Cost 2026", href: "/blog/heat-pump-installation-cost", tag: "Pricing" },
+  { title: "Furnace Replacement Cost 2026", href: "/blog/furnace-replacement-cost", tag: "Pricing" },
+  { title: "AC Replacement Cost 2026", href: "/blog/air-conditioner-replacement-cost", tag: "Pricing" },
+  { title: "Heat Pump Rebates by State", href: "/blog/heat-pump-rebates-by-state", tag: "Savings" },
   { title: "Heat Pump vs Gas Furnace", href: "/blog/heat-pump-vs-gas-furnace", tag: "Comparison" },
   { title: "Mini-Split vs Central Air", href: "/blog/mini-split-vs-central-air", tag: "Comparison" },
   { title: "Best HVAC Brands Ranked", href: "/blog/best-hvac-brands", tag: "Comparison" },

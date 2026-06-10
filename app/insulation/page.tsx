@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const topics = [
   { title: "Home Insulation Cost 2026", href: "/blog/home-insulation-cost", tag: "Pricing" },
+  { title: "Spray Foam Insulation Cost", href: "/blog/spray-foam-insulation-cost", tag: "Pricing" },
   { title: "Blown-In Insulation Cost Guide", href: "/blog/blown-in-insulation-cost", tag: "Pricing" },
   { title: "Types of Home Insulation", href: "/blog/types-of-home-insulation", tag: "Guide" },
   { title: "Spray Foam vs Fiberglass", href: "/blog/spray-foam-vs-fiberglass-insulation", tag: "Comparison" },
